@@ -1,0 +1,34 @@
+.hvHeader {
+  display: flex;
+  width: 100vw;
+  padding: 30px;
+  justify-content: flex-start;
+}
+
+.appIcon {
+  display: flex;
+  flex-direction: column;
+  width: 6.4ch;
+  position: relative;
+  height: 35px;
+  padding: 1px;
+}
+.appIcon span {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.appIcon :last-child {
+  line-height: 0.15;
+  margin-left: 1.2ch;
+}
+.appDot {
+  width: 6.5px;
+  background-color: #553ffb;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 6.5px;
+}
+

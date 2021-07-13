@@ -1,0 +1,14 @@
+.continueButton{
+    color: white;
+    background-color: #553FFB;
+    border: none;
+    height: 54px;
+    border-radius: 6px;
+    opacity: 0.1;
+    margin-top: 2rem;
+    width: 100%;
+
+}
+.active {
+  opacity: 1;
+}

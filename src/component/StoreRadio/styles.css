@@ -1,0 +1,66 @@
+.storeRadio {
+  text-align: left;
+  height: 70px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  background-color: #553ffb20;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.secondDiv {
+  width: 100%;
+  display: flex;
+  padding-left: 4%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.firstDiv {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid gainsboro;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background: #553ffb;
+  /* border-style: double; */
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+}
+
+.storeRadio div :first-child {
+  font-weight: 500;
+  color: black;
+}
+.storeRadio div :last-child {
+  font-weight: 200;
+  font-size: 13px;
+  color: #8892a2;
+}
+
+.innerImage {
+  width: 50px;
+  border: 1px solid gainsboro;
+  height: 50px;
+  background: grey;
+  background-image: url('./../../assets/logo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 3px;
+  border-radius: 6px;
+}
+.innerText{
+  padding-left:10px;
+}

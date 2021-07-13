@@ -1,0 +1,18 @@
+.chooseStorePage{
+    background: #F4F5F7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+.storeListHeading{
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.storeListDescription{
+    font-weight: 400;
+    font-size: 16px;
+    color: #8892A2;
+    margin-bottom: 30px;
+}
