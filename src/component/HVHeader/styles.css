@@ -3,6 +3,8 @@
   width: 100vw;
   padding: 30px;
   justify-content: flex-start;
+  position: fixed;
+  top: 0;
 }
 
 .appIcon {

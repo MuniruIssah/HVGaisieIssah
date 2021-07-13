@@ -1,0 +1,10 @@
+.inputField{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.inputField label{
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 10px;
+    width: 100%;
+}

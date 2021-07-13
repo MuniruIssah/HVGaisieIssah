@@ -40,3 +40,44 @@
 .row {
   width: 100vw;
 }
+
+.centeredPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.grey{
+  background: #f4f5f7;
+}
+
+.bolder {
+  font-weight: 700;
+}
+.description {
+  font-weight: 400;
+  color: #8892a2;
+}
+.formHeader {
+  margin-bottom: 15px;
+}
+.button {
+  color: white;
+  background-color: #553ffb;
+  border: none;
+  border-radius: 6px;
+  height: 54px;
+  margin-top: 1rem;
+}
+
+.input-group-prepend .input-group-text {
+  background-color: white;
+  border-radius: 6px 0px 0px 6px;
+}
+.input-group-text .form-control {
+  border: none;
+}
+
+ 

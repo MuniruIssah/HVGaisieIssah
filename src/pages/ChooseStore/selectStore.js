@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ContinueButton } from "../../component/ContinueButton/continueButton";
 import HvHeader from "../../component/HVHeader/hvHeader";
 import StoresWrapper from "../../component/StoresWrapper/storesWrapper";
+import { GreyCenterLayout } from "../../layouts/centerLayout";
 import "./styles.css";
 
 const dummyListOfShops = [
@@ -57,10 +58,9 @@ const SelectStore = () => {
   };
 
   return (
-    <div className="chooseStorePage">
-      <HvHeader />
-      <span className="storeListHeading">Welcome</span>
-      <span className="storeListDescription">
+    <GreyCenterLayout>
+      <span className="bolder storeListHeading">Welcome</span>
+      <span className="description storeListDescription">
         Please select the name of the store you want to sign in to.
       </span>
       <StoresWrapper
@@ -69,7 +69,7 @@ const SelectStore = () => {
         onSelect={handleStoreSelection}
       />
       <ContinueButton data={copy} />
-    </div>
+    </GreyCenterLayout>
   );
 };
 

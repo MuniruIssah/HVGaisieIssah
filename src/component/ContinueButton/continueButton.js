@@ -10,7 +10,7 @@ export const ContinueButton = ({ data }) => {
       <Col xs={{ size: 10, offset: 1 }} sm="10" md={{ size: 6, offset: 3 }}>
         <button
           className={
-            buttonClassName ? "continueButton active" : "continueButton"
+            buttonClassName ? "button continueButton active" : "button continueButton"
           }
           disabled={buttonClassName ? false : true}
         >
