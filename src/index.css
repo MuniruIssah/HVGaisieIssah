@@ -14,3 +14,7 @@ code {
 *{
   font-family: 'Cabin', sans-serif;
 }
+
+:root{
+  --progress-color:#f17645;
+}

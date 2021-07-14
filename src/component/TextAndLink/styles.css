@@ -1,0 +1,8 @@
+.tAndL{
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #8892A2;
+}

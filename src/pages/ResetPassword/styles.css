@@ -1,6 +1,7 @@
 .resetPasswordForm{
     display: flex;
     flex-direction: column;
+    padding-top: 0.5rem;
     justify-content: center;
 }
 .formDescriptionStrip{
@@ -8,13 +9,7 @@
     justify-content: center;
     margin-bottom: 15px;
 }
-.formDescription{
-    font-size: 14px;
-    width: 70%;
-}
-.formHeader{
-    font-size: 18px;
-}
+
 .returnLink{
     font-size: 14px;
     font-weight: 700;

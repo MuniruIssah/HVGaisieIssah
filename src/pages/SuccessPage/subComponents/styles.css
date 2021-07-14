@@ -1,0 +1,24 @@
+/* success card styles  */
+.successWrapper{
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    border-radius: 6px;
+}
+
+
+/* success icon */
+.successIcon{
+    font-size: 90px;
+    color: #38C985;
+    margin-top:3rem;
+    margin-bottom: 2rem;
+}
+
+/* success header */
+.successHeader{
+    font-size: 23px;
+}

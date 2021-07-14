@@ -7,6 +7,7 @@ import { Alert } from "reactstrap";
 import { handleFormSubmission } from "./../../utils/functions";
 import { HvAlert } from "../../component/HvAlert/hvAlert";
 import { WhiteCenterLayout } from "../../layouts/centerLayout";
+import DescriptionStrip from "../../component/DescriptionStrip/descriptionStrip";
 
 const ResetPasswordForm = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -35,14 +36,13 @@ const ResetPasswordForm = () => {
   return (
     <form className="resetPasswordForm" onSubmit={submitForm}>
       <span className="bolder formHeader">Reset Password</span>
-      <div className="formDescriptionStrip">
-        <span className="description formDescription">
-          Enter the phone number associated with your account and we'll send you
-          a code to reset your password.
-        </span>
-      </div>
+      <DescriptionStrip
+        description=" Enter the phone number associated with your account and we'll send you
+          a code to reset your password."
+      />
       <InputField
         label="Phone Number"
+        inputType="phone_number"
         onChange={handlePhoneNumberChange}
         onSelect={handlePhoneNumberCodeChange}
       />

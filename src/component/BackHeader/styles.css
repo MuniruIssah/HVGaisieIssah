@@ -1,0 +1,22 @@
+.backHeader{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.backHeader button{
+    background-color:transparent ;
+    border: none;
+    font-size: 12px;
+    display: flex;
+    
+    align-items: center;
+
+}
+
+.backHeaderIcon{
+    margin-right:7px;
+    font-size: 14px;
+}

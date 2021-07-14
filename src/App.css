@@ -49,12 +49,16 @@
   width: 100vw;
 }
 
-.grey{
+.grey {
   background: #f4f5f7;
 }
 
 .bolder {
   font-weight: 700;
+}
+.light{
+  font-weight:lighter;
+  color: #848ca7
 }
 .description {
   font-weight: 400;
@@ -70,8 +74,10 @@
   border-radius: 6px;
   height: 54px;
   margin-top: 1rem;
+  width: 100%;
 }
 
+/* prepend input  */
 .input-group-prepend .input-group-text {
   background-color: white;
   border-radius: 6px 0px 0px 6px;
@@ -80,4 +86,51 @@
   border: none;
 }
 
- 
+/* append input  */
+.input-group-append .input-group-text {
+  background-color: white;
+  border-radius: 0px 6px 6px 0px;
+}
+
+/* form global styles */
+.formDescription {
+  font-size: 14px;
+  width: 70%;
+}
+.formHeader {
+  font-size: 18px;
+  color: #040A1D;
+}
+
+label {
+  font-weight: 600;
+  color: #3d4356;
+}
+
+.vfLabel{
+  color:#3D4356;
+}
+
+
+
+ .progress{
+  background-color: #E1E4E7 !important;
+  height: 5px !important;
+  border-radius: 10px;
+}
+.progress-bar{
+  /* background-color: #11CDEF !important;
+   */
+   background-color: var(--progress-color) !important;
+  border-radius: 10px !important;
+}
+
+.popover{
+  background-color: transparent  !important;
+  border: none !important;
+}
+
+.successDescription{
+  font-size: 16px;
+  margin-bottom: 2rem;
+}

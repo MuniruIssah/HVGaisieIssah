@@ -1,17 +1,21 @@
-import { Button } from 'bootstrap'
-import React from 'react'
-import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import React,{useState} from 'react'
+import { InputGroup, InputGroupAddon, InputGroupText, Input, Button } from 'reactstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-const PasswordField = () => {
+import { faEyeSlash,faEye } from "@fortawesome/free-solid-svg-icons";
+import "./styles.css"
+const PasswordField = ({onChange,onSelect}) => {
+    const [passwordType, setPasswordType] = useState(true)
+    const handleChange=(e)=>{
+      onChange(e)
+    }
     return (
         <InputGroup>
-        <InputGroupAddon addonType="append" >
+        <Input  type={passwordType?'password':'text'}  placeholder="New Password"  onChange={handleChange} required />
+        <InputGroupAddon addonType='append' >
           <InputGroupText>
-            <Button><FontAwesomeIcon icon={faEyeSlash} /> </Button>
+            <button type='button' onClick={()=>setPasswordType(!passwordType)}  className='eyeButton'><FontAwesomeIcon className='passwordIcon' icon={passwordType?faEyeSlash:faEye} /></button>
           </InputGroupText>
         </InputGroupAddon>
-        <Input type='password'  placeholder="Enter Number" className='telInput' required />
       </InputGroup>
         
     )

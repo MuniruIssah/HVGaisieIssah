@@ -1,0 +1,25 @@
+.progressWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom:0.6rem ;
+}
+.innerProgressWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.progressIcon {
+  color: #fbbc05;
+  margin-left: 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.progressAlert{
+    font-size: 12px;
+}
+.progressAlertStrip{
+    text-align: left;
+}
