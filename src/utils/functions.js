@@ -1,27 +1,38 @@
 //Handle Phone Form Submission
 export const handleFormSubmission = (phoneNumber, phoneNumberCode) => {
   let regex = /[A-Za-z]/gi;
+  let alertMessage='';
+  let status='Ok'
   if (regex.test(phoneNumber)) {
     // We couldn’t find that phone number. Please try again.
-    return "The number you entered contains letters";
+    alertMessage="The number you entered contains letters";
+    status="Error"
   } else if (phoneNumber.length < 9) {
-    return "The number you entered is less than 9 digits";
+    alertMessage="The number you entered is less than 9 digits";
+    status="Error"
   } else if (phoneNumber.length > 9) {
-    return "The number you entered is more than 9 digits";
+    alertMessage= "The number you entered is more than 9 digits";
+    status="Error"
   }
-  window.location.href=`/reset_password/${phoneNumberCode}${phoneNumber}`
+  return {alertMessage,status}
 };
 
 //Handle new password submission
 
 export const handlePasswordRenewal = (password, verifyPassword, strength) => {
+  let alertMessage='';
+  let status='Ok'
   if (password !== verifyPassword) {
-    return "Passwords do not match, please try again";
+    alertMessage="Passwords do not match, please try again";
+    status="Error"
+
   } else if (strength === "Weak") {
-    return "Your password is not strong enough";
-  } else {
-    window.location.href = "/reset_password/success";
-  }
+    alertMessage="Your password is not strong enough";
+    status="Error"
+
+  } 
+  return {alertMessage,status}
+  
 };
 
 //Handle Password Strength
@@ -72,6 +83,9 @@ export const handlePasswordStrength = (password) => {
 
 //Handle Code Verification
 export const handleCodeVerification=(code)=>{
-window.location.href='/reset_password/2/newPassword'
+  let alertMessage='';
+  let status='Ok'
+// window.location.href='/reset_password/2/newPassword'
+  return {alertMessage,status}
 }
 

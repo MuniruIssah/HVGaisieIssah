@@ -7,25 +7,31 @@ import "./styles.css";
 import TextAndLink from "../../component/TextAndLink/textAndLink";
 import InputField from "../../component/InputFields/inputField";
 import { handleCodeVerification } from "../../utils/functions";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 const VerificationForm = () => {
-  const {number}=useParams()
+  const { number } = useParams();
+  const history=useHistory();
   const [code, setCode] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
   //handle form submission
   const handleFormSubmission = (e) => {
     e.preventDefault();
     if (code.length < 4) {
-      setAlertMessage("The codes are not up to 4")
-    }else{
-      handleCodeVerification(code)
+      setAlertMessage("The codes are not up to 4");
+    } else {
+      let aMessage = handleCodeVerification(code);
+      if (aMessage.status === "Ok") {
+        history.push(`/reset_password/${number}/newPassword`)
+      } else {
+        setAlertMessage(aMessage.alertMessage);
+      }
     }
   };
 
   const handleNumberCodeChange = (value) => {
     setCode(value);
-    setAlertMessage('')
+    setAlertMessage("");
   };
   return (
     <form onSubmit={handleFormSubmission}>
@@ -35,7 +41,7 @@ const VerificationForm = () => {
         type="vfLabel"
       >
         <span className="bolder" style={{ display: "block" }}>
-          {number?number:'+233 500 778 291'}
+          {number ? number : "+233 500 778 291"}
         </span>
       </DescriptionStrip>
       <InputField inputType="codes" onChange={handleNumberCodeChange} />

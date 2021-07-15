@@ -10,8 +10,10 @@ import {
 } from "../../utils/functions";
 import GreyForm from "./../../component/GreyForm/greyForm";
 import "./styles.css";
+import { useHistory } from "react-router-dom";
 
 const EnterPasswordForm = () => {
+  const history=useHistory()
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
@@ -21,7 +23,11 @@ const EnterPasswordForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let aMessage = handlePasswordRenewal(password, verifyPassword,strength);
-    setAlertMessage(aMessage);
+    if (aMessage.status==="Ok") {
+      history.push(`/reset_password/success`)
+    } else {
+      setAlertMessage(aMessage.alertMessage)
+    }
   };
 
   const handlePasswordChange = (e) => {

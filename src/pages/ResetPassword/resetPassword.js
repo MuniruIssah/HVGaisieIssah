@@ -8,8 +8,10 @@ import { handleFormSubmission } from "./../../utils/functions";
 import { HvAlert } from "../../component/HvAlert/hvAlert";
 import { WhiteCenterLayout } from "../../layouts/centerLayout";
 import DescriptionStrip from "../../component/DescriptionStrip/descriptionStrip";
+import { useHistory } from "react-router-dom";
 
 const ResetPasswordForm = () => {
+  const history=useHistory()
   const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneNumberCode, setPhoneNumberCode] = useState("+233");
   const [alertMessage, setAlertMessage] = useState("");
@@ -18,7 +20,11 @@ const ResetPasswordForm = () => {
   const submitForm = (e) => {
     e.preventDefault();
     let aMessage = handleFormSubmission(phoneNumber, phoneNumberCode);
-    setAlertMessage(aMessage);
+    if (aMessage.status==="Ok") {
+        history.push(`/reset_password/${phoneNumberCode}${phoneNumber}`)
+    } else {
+      setAlertMessage(aMessage.alertMessage)
+    }
   };
 
   //Handling Phone Number Change
