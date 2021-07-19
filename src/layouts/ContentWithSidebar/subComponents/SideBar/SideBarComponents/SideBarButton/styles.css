@@ -1,0 +1,42 @@
+.sideBarButton {
+  height: 65px;
+  display: flex;
+  border: none;
+  background: none;
+  border-radius: 10px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0px;
+  transition: all 250ms ease-in-out;
+}
+.sideBarButton label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8892a2;
+}
+.sideBarButtonIcon {
+  font-size: 16px;
+  color: #8892a2;
+}
+.active{
+    background-color: rgb(85, 63, 251,0.1);
+}
+.active label{
+  color: #040a1d;
+}
+.active .sideBarButtonIcon{
+  color: #553ffb;
+}
+.sideBarButton:hover {
+  background-color: rgb(87, 65, 251, 0.1);
+}
+
+.sideBarButton:hover .sideBarButtonIcon {
+  color: #553ffb;
+}
+
+.sideBarButton:hover label {
+  color: #040a1d;
+}

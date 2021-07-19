@@ -9,7 +9,7 @@ import "./styles.css";
 
  const StoresWrapper = ({dummyListOfShops,onSelect,onSearch}) => {
     return (
-        <Row className='row'>
+        <Row className='formRow'>
        <Col xs={{ size: 10, offset: 1 }} sm="10" md={{ size: 6, offset: 3 }}>
             <div className='storesWrapper'>
               <SearchBar onSearch={onSearch}/>

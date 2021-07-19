@@ -1,0 +1,19 @@
+.hvDashboardSideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: auto;
+}
+
+.hvDashboardSideBarLogo {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

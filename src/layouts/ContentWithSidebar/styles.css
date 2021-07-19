@@ -1,0 +1,14 @@
+.contentWithSideBarLayout {
+  background: #f4f5f7;
+  width: 100vw;
+  height: 100vh;
+}
+.sideBarColumn {
+  background: white;
+  padding-top: 1rem;
+  border-right:1px solid #E3E7ED;
+}
+.contentColumn{
+
+
+}

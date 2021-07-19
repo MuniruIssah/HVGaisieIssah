@@ -5,7 +5,7 @@ const AppDot = () => {
   return <div className="appDot"></div>;
 };
 
-const AppIcon = () => {
+export const AppIcon = () => {
   return (
     <div className="appIcon">
       <AppDot />

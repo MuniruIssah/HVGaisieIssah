@@ -1,0 +1,33 @@
+.fixedHeader {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  height: 7vh;
+  width: 100%;
+  padding-right: 5%;
+  background-color: #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.fixedHeaderContent {
+  margin-right: 10px;
+}
+.fixedHeaderContent:last-child {
+  margin-right: 0px;
+}
+.fHCIcon {
+  font-size: 15px;
+  color: #8892a2;
+}
+.fHCStoreLabel {
+  font-size: 13px;
+}
+.fHCStoreImage{
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
