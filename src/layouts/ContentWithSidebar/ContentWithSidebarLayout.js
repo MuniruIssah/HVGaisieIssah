@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Row } from "reactstrap";
 import "./styles.css";
 import SideBar from "./subComponents/SideBar/SideBar";
-import logo from "../../assets/logo.png";
 import Content from "./subComponents/Content/Content";
 import FixedHeader from "./subComponents/FixedHeader/FixedHeader";
 

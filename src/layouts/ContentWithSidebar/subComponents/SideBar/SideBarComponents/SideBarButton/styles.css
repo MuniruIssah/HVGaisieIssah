@@ -20,13 +20,13 @@
   font-size: 16px;
   color: #8892a2;
 }
-.active{
-    background-color: rgb(85, 63, 251,0.1);
+.active {
+  background-color: rgb(85, 63, 251, 0.1);
 }
-.active label{
+.active label {
   color: #040a1d;
 }
-.active .sideBarButtonIcon{
+.active .sideBarButtonIcon {
   color: #553ffb;
 }
 .sideBarButton:hover {

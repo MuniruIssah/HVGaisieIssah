@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import "./styles.css";
@@ -8,11 +7,12 @@ const SideBarButton = ({ icon, label, link }) => {
   const { path } = useRouteMatch();
   const history = useHistory();
   const handleLink = () => history.push(link);
-  console.log(window.location.href,link)
-  let fullLink=`http://localhost:3000${link}`
-  let classs = window.location.href===fullLink
-    ? "sideBarButton active"
-    : "sideBarButton";
+  console.log(window.location.href, link);
+  let fullLink = `http://localhost:3000${link}`;
+  let classs =
+    window.location.href === fullLink
+      ? "sideBarButton active"
+      : "sideBarButton";
   return (
     <button onClick={handleLink} className={classs}>
       <FontAwesomeIcon

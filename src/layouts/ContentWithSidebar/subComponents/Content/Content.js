@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 import "./styles.css";
 const Content = ({ innerContent }) => {
-  const { path } = useRouteMatch();
   return (
     <main className="hvDashboardContentArea">
       <Switch>

@@ -1,0 +1,10 @@
+.dashboardCardDateToday {
+  width: 100%;
+}
+.todaysDateSpan {
+  color: #8892a2;
+  font-size: 12px;
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+}

@@ -4,6 +4,9 @@ import SelectStore from './pages/ChooseStore/selectStore';
 import Login from './pages/StoreLogin/login';
 import { ResetPasswordRoutes } from './subRoutes/ResetPasswordRoutes';
 import HVDashboard from "./pages/Dashboard/dashboard";
+import "react-datetime/css/react-datetime.css";
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 function App() {
   return (
     <div className="App">
