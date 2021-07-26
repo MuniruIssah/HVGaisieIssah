@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
-const TwoColumnLayout = ({ children }) => {
-  return <div className="twoColumnLayout">{children}</div>;
+const TwoColumnLayout = ({ children,grid }) => {
+  return <div className="twoColumnLayout" style={{gridTemplateColumns:grid}}>{children}</div>;
 };
 
 export default TwoColumnLayout;

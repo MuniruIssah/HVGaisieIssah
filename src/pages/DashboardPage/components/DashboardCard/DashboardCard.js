@@ -13,7 +13,7 @@ const DashBoardCard = ({
   children,
 }) => {
   return (
-    <div className="dashboardCard" style={{ flex: flex}}>
+    <div className="dashboardCard">
       <div className="dashboardCardHeaderSection">
       <DashboardCardHeader title={title} dates={dates} large={largeHeader} />
       <DashboardCardDateToday dateToday={dateToday} />

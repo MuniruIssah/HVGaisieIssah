@@ -149,11 +149,11 @@ const DashboardPage = () => {
   return (
     <div className="dashboardPage">
       <h1>Dashboard</h1>
-      <TwoColumnLayout>
-        <DashBoardCard flex={0.5} dates={DateClasses} dateToday={true}>
+      <TwoColumnLayout grid="1fr 1fr">
+        <DashBoardCard dates={DateClasses} dateToday={true}>
           <LabelAndValueStrip list={labelandValue} />
         </DashBoardCard>
-        <DashBoardCard flex={0.5}>
+        <DashBoardCard>
           <LabelAndValueStrip list={labelandValue2} />
         </DashBoardCard>
       </TwoColumnLayout>
@@ -165,28 +165,20 @@ const DashboardPage = () => {
       >
         <HVChartComponent />
       </DashBoardCard>
-      <TwoColumnLayout>
-        <DashBoardCard flex={0.4} title="New Customers">
+      <TwoColumnLayout grid="1fr 2fr">
+        <DashBoardCard title="New Customers">
           <ImageOnlyList list={ImageList} />
         </DashBoardCard>
-        <DashBoardCard flex={0.6} title="Top 6 Products">
+        <DashBoardCard title="Top 6 Products">
           <ComplexList list={CompList} />
         </DashBoardCard>
       </TwoColumnLayout>
-      <TwoColumnLayout>
-        <DashBoardCard
-          flex={0.5}
-          dates={DateClasses}
-          title="Revenues by Districts"
-        >
+      <TwoColumnLayout grid="1fr 1fr">
+        <DashBoardCard dates={DateClasses} title="Revenues by Districts">
           <NumberOnlyList list={RevenueList} />
         </DashBoardCard>
-        <DashBoardCard
-          flex={0.5}
-          dates={DateClasses}
-          title="Top 3 Vehicles"
-        >
-          <HVChartComponent />
+        <DashBoardCard dates={DateClasses} title="Top 3 Vehicles">
+          <HVChartComponent multi />
         </DashBoardCard>
       </TwoColumnLayout>
     </div>
