@@ -1,0 +1,25 @@
+.dateToggleButtons {
+  display: flex;
+  margin-left: 10px;
+}
+
+.dateToggleButton {
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  font-size: 12px;
+  color: #8892a2;
+  padding: 7px 12px;
+  margin-left: 10px;
+  background: #f4f5f7;
+}
+
+.dateToggleButton:first-child {
+  border-radius: 6px;
+  margin: 0px;
+}
+
+.active {
+  background: #553ffb10;
+  color: #553ffb;
+}

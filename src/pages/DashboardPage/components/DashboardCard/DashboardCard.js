@@ -15,8 +15,8 @@ const DashBoardCard = ({
   return (
     <div className="dashboardCard">
       <div className="dashboardCardHeaderSection">
-      <DashboardCardHeader title={title} dates={dates} large={largeHeader} />
-      <DashboardCardDateToday dateToday={dateToday} />
+        <DashboardCardHeader title={title} dates={dates} large={largeHeader} />
+        <DashboardCardDateToday dateToday={dateToday} />
       </div>
       {children}
     </div>

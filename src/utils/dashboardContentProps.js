@@ -10,6 +10,7 @@ import {
   faTruckMoving,
 } from "@fortawesome/free-solid-svg-icons";
 import DashboardPage from "../pages/DashboardPage/DashboardPage";
+import FinancePage from "../pages/FinancePage/FinancePage";
 export const SideBarContent = [
   {
     label: "Dashboard",
@@ -66,7 +67,7 @@ export const SideBarContent = [
 export const mainContent = [
   {
     path: "/dashboard",
-    exact:true,
+    exact: true,
     component: DashboardPage,
   },
   {
@@ -75,7 +76,7 @@ export const mainContent = [
   },
   {
     path: "/dashboard/finance",
-    component: "This is finance",
+    component: FinancePage,
   },
   {
     path: "/dashboard/inventory",

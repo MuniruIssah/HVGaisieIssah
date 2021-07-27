@@ -1,0 +1,64 @@
+.financeSelectWrapper {
+  position: relative;
+}
+
+.financeSelect {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 6px;
+  border-radius: 6px;
+  width: 200px;
+  align-items: center;
+  background-color: #f4f5f7;
+  border: none;
+}
+
+.financeSelectInfoSection {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.financeSelectInfoSection span:first-child {
+  color: #8892a2;
+  font-size: 11px;
+}
+.financeSelectInfoSection span {
+  color: #3d4356;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.financeSelectIcon {
+  font-size: 12px;
+  color: #8892a2;
+  transition: all 300ms ease-in;
+}
+.iconRotate{
+    transform: rotateZ(180deg);
+}
+
+.financeSelectPopup {
+  transition: all 250ms ease-in-out;
+  position: absolute;
+  padding: 10px 0px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(136, 146, 162, 0.2);
+  border-radius: 6px;
+}
+
+.financeSelectPopupButton {
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 15px;
+  text-align: left;
+  background: none;
+  font-size: 14px;
+  color: #3d4356;
+}
+
+.activePopupButton {
+  background-color: rgb(85, 63, 251, 10%);
+  box-sizing: border-box;
+  border-left: 3px solid #553ffb;
+}
