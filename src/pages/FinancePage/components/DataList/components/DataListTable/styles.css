@@ -1,0 +1,78 @@
+.dataListTable {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  margin-bottom: 1.1rem;
+}
+.dataListTable .tableHeader {
+  border-spacing: 0 10px;
+  margin-bottom: 2rem;
+}
+.dataListTable .tableHeader th {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #8892a2;
+  margin-bottom: 0.8rem;
+}
+.dataListTable .tableHeader th:first-child {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+  align-items: center;
+}
+
+.tableCheck {
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border: 1px solid #e9ecef;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.02),
+    0px 1px 3px rgba(50, 50, 93, 0.15);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.dataListTableItem {
+  color: #3d4356;
+  font-weight: 400;
+  font-size: 14px;
+  height: 45px;
+}
+
+.dataListTableItem td {
+  background: #ffffff;
+}
+
+.dataListTableItem td:first-child {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px 0px 0px 6px;
+  height: 45px;
+}
+.dataListTableItem td:last-child {
+  border-radius: 0px 6px 6px 0px;
+}
+.dataListTableItem .tableActionButton {
+  border: 1px solid #e3e7ed;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #8892a2;
+}
+
+.dataListTableItem:hover td:first-child::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  left: 0;
+  background-color: #553ffb;
+}
+.dataListTableItem:hover {
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}

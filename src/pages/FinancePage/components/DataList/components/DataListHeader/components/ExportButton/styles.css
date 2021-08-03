@@ -1,0 +1,21 @@
+.exportButton {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 500;
+  width: 80px;
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  color: #8892A2;
+  border-radius: 6px;
+}
+.exportButton span{
+    margin-right:9px;
+}
+.exportButton .eBIcon{
+    font-size: 16px;
+}

@@ -12,9 +12,7 @@ const HVSideBar = ({ sideBarButtons }) => {
       {sideBarButtons.map((sideBarButton) => (
         <SideBarButton
         key={sideBarButton.label}
-          label={sideBarButton.label}
-          icon={sideBarButton.icon}
-          link={sideBarButton.link}
+         {...sideBarButton}
         />
       ))}
     </aside>

@@ -25,6 +25,17 @@ export const SideBarContent = [
   {
     label: "Finance",
     link: "/dashboard/finance",
+    subroutes:[
+      {
+        label:"Overview",
+        link:"/dashboard/finance",
+      },
+      {
+        label:"Transaction History",
+        link:"/dashboard/finance/history",
+      },
+
+    ],
     icon: faWallet,
   },
   {

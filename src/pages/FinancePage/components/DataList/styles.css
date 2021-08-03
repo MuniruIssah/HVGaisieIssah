@@ -1,0 +1,13 @@
+.dataListExtras {
+  min-height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dataListFooter {
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

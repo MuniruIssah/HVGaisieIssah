@@ -7,7 +7,11 @@ const Content = ({ innerContent }) => {
       <Switch>
         {innerContent.map((item) => (
           <Route path={item.path} exact={item.exact}>
-            {item.component}
+            {typeof item.component !== "string" ? (
+              <item.component {...item} />
+            ) : (
+              item.component
+            )}
           </Route>
         ))}
       </Switch>
