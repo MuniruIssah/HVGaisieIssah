@@ -1,3 +1,4 @@
+/* DataList Table Styles */
 .dataListTable {
   width: 100%;
   box-sizing: border-box;
@@ -6,6 +7,7 @@
   border-spacing: 0 3px;
   margin-bottom: 1.1rem;
 }
+/* Styling the table header */
 .dataListTable .tableHeader {
   border-spacing: 0 10px;
   margin-bottom: 2rem;
@@ -23,6 +25,7 @@
   align-items: center;
 }
 
+/* Table Checkbox styles */
 .tableCheck {
   width: 17px;
   height: 17px;
@@ -33,17 +36,18 @@
   border-radius: 3px;
   cursor: pointer;
 }
+
+/* Styling The table list item (row) */
 .dataListTableItem {
   color: #3d4356;
   font-weight: 400;
   font-size: 14px;
-  height: 45px;
+  height: 50px;
 }
 
 .dataListTableItem td {
   background: #ffffff;
 }
-
 .dataListTableItem td:first-child {
   display: flex;
   position: relative;
@@ -51,19 +55,53 @@
   justify-content: center;
   align-items: center;
   border-radius: 6px 0px 0px 6px;
-  height: 45px;
+  height: 50px;
 }
 .dataListTableItem td:last-child {
   border-radius: 0px 6px 6px 0px;
 }
+
+/* Styling the action button */
 .dataListTableItem .tableActionButton {
   border: 1px solid #e3e7ed;
   box-sizing: border-box;
-  border-radius: 6px;
   background: #ffffff;
   color: #8892a2;
 }
+.dataListTableItem .tableActionButton:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.dataListTableItem .tableActionButton:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
 
+/* Styling the status spans */
+.status span {
+  padding: 2px 9px;
+  border-radius: 6px;
+}
+.paid span {
+  background: rgba(56, 201, 133, 0.1);
+  color: #38c985;
+}
+
+.cancelled span {
+  background: rgba(255, 65, 39, 0.1);
+  color: #ff4127;
+}
+
+/* Styling Customer Row */
+.customer span {
+  display: block;
+}
+.customer span:last-child {
+  font-size: 12px;
+  color: #8892a2;
+}
+
+/* On Hovering the data list item(row) */
 .dataListTableItem:hover td:first-child::before {
   content: "";
   position: absolute;

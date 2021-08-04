@@ -3,10 +3,14 @@ import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import DataListModal from "../DataListModal/DataListModal";
+import Invoice from "../../../Invoice/Invoice";
 const dummyList = [
   {
     INVOICE_ID: "wwwww",
-    CUSTOMER: "Issah",
+    CUSTOMER: {
+      name: "Issah",
+      shop: "SwipeWire",
+    },
     DATE: "29292939",
     DRIVER: "Kwame",
     STATUS: "Paid",
@@ -15,16 +19,22 @@ const dummyList = [
   },
   {
     INVOICE_ID: "wwwww",
-    CUSTOMER: "Issah",
+    CUSTOMER: {
+      name: "Issah",
+      shop: "SwipeWire",
+    },
     DATE: "29292939",
     DRIVER: "Kwame",
-    STATUS: "Paid",
+    STATUS: "Cancelled",
     PAYMENT_TYPE: "Cash",
     AMOUNT: "$4994",
   },
   {
     INVOICE_ID: "wwwww",
-    CUSTOMER: "Issah",
+    CUSTOMER: {
+      name: "Issah",
+      shop: "SwipeWire",
+    },
     DATE: "29292939",
     DRIVER: "Kwame",
     STATUS: "Paid",
@@ -77,12 +87,20 @@ const FinanceDataListTableItem = ({ item }) => {
           <div className="tableCheck"></div>
         </td>
         <td>{item.INVOICE_ID}</td>
-        <td>{item.CUSTOMER}</td>
+        <td className="customer">
+          <span>{item.CUSTOMER.name}</span>
+          <span>{item.CUSTOMER.shop}</span>
+        </td>
         <td>{item.DATE}</td>
         <td>{item.DRIVER}</td>
-        <td>{item.STATUS}</td>
-        <td>{item.PAYMENT_TYPE}</td>
-        <td>{item.AMOUNT}</td>
+        <td
+          className={` status ${item.STATUS === "Paid" ? "paid" : "cancelled"}`}
+        >
+          {" "}
+          <span>{item.STATUS}</span>
+        </td>
+        <td style={{ color: "#8892A2" }}>{item.PAYMENT_TYPE}</td>
+        <td style={{ fontWeight: "700" }}>{item.AMOUNT}</td>
         <td>
           <button
             onClick={() => setVisible(true)}
@@ -92,7 +110,9 @@ const FinanceDataListTableItem = ({ item }) => {
           </button>
         </td>
       </tr>
-      <DataListModal visible={visible} onClose={() => setVisible(false)} />
+      <DataListModal visible={visible} onClose={() => setVisible(false)}>
+        <Invoice onClose={() => setVisible(false)} />
+      </DataListModal>
     </>
   );
 };
