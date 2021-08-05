@@ -50,9 +50,9 @@
   border-bottom-right-radius: 6px;
 }
 
-.invoiceClose {
-  font-size: 25px;
-  color: #8892a2;
+.invoiceHeader .eyecons {
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Invoice Issue Strip */
@@ -137,11 +137,11 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 3px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   counter-reset: invoice;
 }
 .invoiceItemListTableHeadItem:first-child {
-    padding-left: 5%;
+  padding-left: 5%;
 }
 .invoiceItemListTableHeadItem {
   font-weight: 500;
@@ -172,4 +172,70 @@
   margin-left: 1ch;
   height: 20px;
   border-radius: 50%;
+}
+
+.invoiceLabelAndValueItem {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  margin-bottom: 10px;
+}
+.invoiceLabelAndValueItem span:first-child {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height, or 100% */
+  text-align: right;
+
+  /* HopeVoice/black/gray2 */
+  color: #8892a2;
+}
+.invoiceLabelAndValueItem span:last-child {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 172.4%;
+  margin-left: 8%;
+  text-align: right;
+  color: #040a1d;
+}
+
+.invoiceStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.invoiceStatus .orderBlock {
+  width: 220px;
+  background: rgb(56, 201, 133, 0.1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px;
+  margin-bottom: 10px;
+}
+.invoiceStatus .orderBlock span:first-child {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+  color: #38c985;
+}
+.invoiceStatus .orderBlock span:last-child {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: right;
+  color: #38c985;
+}
+
+.invoiceStatus .statusBlock {
+  font-size: 12px;
+  line-height: 15px;
+  color: #38c985;
+  background: rgba(56, 201, 133, 0.1);
+  border-radius: 6px;
+  padding: 1px 9px;
+  margin-right: 4%;
 }

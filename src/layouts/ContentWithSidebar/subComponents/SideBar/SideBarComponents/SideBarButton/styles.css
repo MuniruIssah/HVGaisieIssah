@@ -22,7 +22,10 @@
   color: #8892a2;
 }
 .sideBarButtonIcon {
-  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
   color: #8892a2;
 }
 .active {
@@ -31,16 +34,11 @@
 .active label {
   color: #040a1d;
 }
-.active .sideBarButtonIcon {
-  color: #553ffb;
-}
+
 .sideBarButton:hover {
   background-color: rgb(87, 65, 251, 0.1);
 }
 
-.sideBarButton:hover .sideBarButtonIcon {
-  color: #553ffb;
-}
 
 .sideBarButton:hover label {
   color: #040a1d;

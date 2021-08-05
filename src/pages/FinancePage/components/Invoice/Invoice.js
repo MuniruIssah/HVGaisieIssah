@@ -4,6 +4,12 @@ import {
   faCaretSquareUp,
   faFilePdf,
 } from "@fortawesome/free-regular-svg-icons";
+import close from "../../assets/closeIcon.png";
+import print from "../../assets/print.png";
+import pdf from "../../assets/pdf.png";
+
+
+
 import { faPrint, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 const Invoice = () => {
@@ -13,6 +19,10 @@ const Invoice = () => {
       <InvoiceIssueStrip />
       <InvoiceAddressStrip />
       <InvoiceItemList />
+      <InvoiceLabelAndValueItem label="Sub Total" />
+      <InvoiceLabelAndValueItem label="Shipping" value="₵100" />
+      <InvoiceLabelAndValueItem label="Tax" value="₵50" />
+      <InvoiceStatus />
     </div>
   );
 };
@@ -28,13 +38,22 @@ const InvoiceHeader = () => {
       </div>
       <div className="invoiceHeaderButtons">
         <button>
-          <FontAwesomeIcon icon={faFilePdf} />
+        <div
+        className="eyecons"
+        style={{ backgroundImage: `url(${pdf})`, width: 20, height: 18 }}
+      ></div>
         </button>
         <button>
-          <FontAwesomeIcon icon={faPrint} />
+        <div
+        className="eyecons"
+        style={{ backgroundImage: `url(${print})`, width: 18, height: 18 }}
+      ></div>
         </button>
       </div>
-      <FontAwesomeIcon className="invoiceClose" icon={faTimes} />
+      <div
+        className="eyecons"
+        style={{ backgroundImage: `url(${close})`, width: 21, height: 21 }}
+      ></div>
     </header>
   );
 };
@@ -108,5 +127,26 @@ const InvoiceItemList = ({ list = dummyList }) => {
         ))}
       </table>
     </section>
+  );
+};
+
+const InvoiceLabelAndValueItem = ({ label = "Label", value = "₵723" }) => {
+  return (
+    <div className="invoiceLabelAndValueItem">
+      <span>{label}</span>
+      <span>{value}</span>
+    </div>
+  );
+};
+
+const InvoiceStatus = ({ status = "Paid", amount = "₵873" }) => {
+  return (
+    <div className="invoiceStatus">
+      <div className="orderBlock">
+        <span>Order Amount</span>
+        <span>{amount}</span>
+      </div>
+      <span className="statusBlock">{status}</span>
+    </div>
   );
 };

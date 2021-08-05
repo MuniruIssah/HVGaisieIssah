@@ -1,23 +1,38 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHourglassHalf } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
-import { useHistory } from "react-router-dom";
-const SideBarButton = ({ icon, label, link, subroutes }) => {
+import { useHistory, useLocation } from "react-router-dom";
+const SideBarButton = ({ label, link, subroutes, active, inactive }) => {
+  const [icon, setIcon] = useState("inactive");
+  const [classs, setClasss] = useState("sideBarButton");
   const history = useHistory();
+  const { pathname } = useLocation();
+  console.log(pathname);
   const handleLink = (link) => history.push(link);
-  let fullLink = `http://localhost:3000${link}`;
-  let classs =
-    window.location.href === fullLink
-      ? "sideBarButton active"
-      : "sideBarButton";
+  useEffect(() => {
+    if (pathname.includes(link)) {
+      setClasss("sideBarButton active");
+      setIcon(active);
+    } else {
+      setClasss("sideBarButton");
+      setIcon(inactive);
+    }
+  }, [pathname]);
+
   return (
-    <div className="sideBarWrapper">
+    <div
+      className="sideBarWrapper"
+      onMouseOver={() => (pathname.includes(link) ? null : setIcon(active))}
+      onMouseLeave={() => (pathname.includes(link) ? null : setIcon(inactive))}
+    >
       <button onClick={() => handleLink(link)} className={classs}>
-        <FontAwesomeIcon
+        <div
           className="sideBarButtonIcon"
-          icon={icon ? icon : faHourglassHalf}
-        />
+          style={{
+            backgroundImage: `url(${icon})`,
+          }}
+        ></div>
         <label>{label}</label>
       </button>
       {subroutes && (

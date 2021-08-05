@@ -1,14 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import "./styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  } from "@fortawesome/free-regular-svg-icons";
-import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
+import excel from '../../../../../../assets/excel.png'
+import DataListExportModal from "../../../../../DataListExportModal/DataListExportModal";
 const ExportButton = () => {
+const [visible, setVisible] = useState(false)
   return (
-    <button className="exportButton">
+    <>
+    <button className="exportButton" onClick={()=>setVisible(true)}>
       <span>Export</span>
-      <FontAwesomeIcon icon={faFileExcel} className="eBIcon" />
+      <div className="eBIcon" style={{ backgroundImage: `url(${excel})`, }}></div>
     </button>
+    <DataListExportModal visible={visible} onClose={()=>setVisible(false)} />
+    </>
   );
 };
 

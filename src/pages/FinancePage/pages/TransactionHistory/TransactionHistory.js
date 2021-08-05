@@ -1,5 +1,5 @@
 import React from "react";
-import DataListModal from "../../components/DataList/components/DataListModal/DataListModal";
+import DataListModal from "../../components/DataListInvoiceModal/DataListInvoiceModal";
 import DataList from "../../components/DataList/DataList";
 import {
   PreSearchResultCard,

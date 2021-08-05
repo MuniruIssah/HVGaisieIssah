@@ -1,12 +1,13 @@
 import React from "react";
+import Invoice from "../Invoice/Invoice";
 import "./styles.css";
-const DataListModal = ({ visible, children,onClose }) => {
+const DataListInvoiceModal = ({ visible, children, onClose }) => {
   return (
     <>
       {visible && (
         <div className="dataListModal" onClick={onClose}>
           <div className="dataListModalContent">
-              {children}
+            <Invoice  />
           </div>
         </div>
       )}
@@ -14,4 +15,4 @@ const DataListModal = ({ visible, children,onClose }) => {
   );
 };
 
-export default DataListModal;
+export default DataListInvoiceModal;

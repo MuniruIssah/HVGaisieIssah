@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
-import DataListModal from "../DataListModal/DataListModal";
+import DataListModal from "../../../DataListInvoiceModal/DataListInvoiceModal";
 import Invoice from "../../../Invoice/Invoice";
 const dummyList = [
   {
@@ -110,9 +110,7 @@ const FinanceDataListTableItem = ({ item }) => {
           </button>
         </td>
       </tr>
-      <DataListModal visible={visible} onClose={() => setVisible(false)}>
-        <Invoice onClose={() => setVisible(false)} />
-      </DataListModal>
+      <DataListModal visible={visible} onClose={() => setVisible(false)} />
     </>
   );
 };
