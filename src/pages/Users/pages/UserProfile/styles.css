@@ -1,0 +1,19 @@
+.financePage {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5%;
+    flex-wrap: wrap;
+  }
+  .financePage h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: 21px;
+    text-align: left;
+    color: #040a1d;
+  }
+
+  .financePage h1 span{
+      font-weight: 400;
+  }

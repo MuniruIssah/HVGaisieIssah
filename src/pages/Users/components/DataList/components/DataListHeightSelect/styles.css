@@ -1,0 +1,45 @@
+.dataListHeightSelect {
+  appearance: none;
+  background-color: white;
+  border: 1px solid #e3e7ed;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0px 6px;
+  margin: 0;
+  outline: none;
+  width: 64px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  color: #8892a2;
+  line-height: inherit;
+  position: relative;
+  display: grid;
+}
+
+/* .dataListHeightSelect::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: #8892a2;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  } */
+
+.dataListHeightSelect::before {
+  content: "Before";
+}
+.dataListHeightSelectIcon{
+    position: absolute;
+    right: 10px;
+    color: #8892a2;
+    top: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20px;
+    font-size: 8px;
+}
+
+.dataListHeightSelectIcon .icon{
+    line-height: 0;
+}

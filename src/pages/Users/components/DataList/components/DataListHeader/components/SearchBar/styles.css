@@ -1,0 +1,30 @@
+.searchBar {
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid #e3e7ed;
+  box-sizing: border-box;
+  border-radius: 6px;
+  height: 30px;
+  display: flex;
+  margin-right: 10px;
+  overflow: hidden;
+  align-items: center;
+}
+.searchBar .sBIcon{
+    flex: 0.1;
+    color: #8892A2;
+    font-size: 13px;
+}
+.searchBar input {
+  outline: none;
+  height: 100%;
+  flex: 0.9;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #040A1D;
+  
+}
+.searchBar input::placeholder{
+    color: #8892A2;
+}

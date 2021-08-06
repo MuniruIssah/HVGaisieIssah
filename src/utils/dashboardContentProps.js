@@ -33,6 +33,7 @@ import SettingsInactive from "../assets/HV/Settings/iccon/inactive.png";
 
 import DashboardPage from "../pages/DashboardPage/DashboardPage";
 import FinancePage from "../pages/FinancePage/FinancePage";
+import Users from '../pages/Users/Users'
 export const SideBarContent = [
   {
     label: "Dashboard",
@@ -152,7 +153,7 @@ export const mainContent = [
   },
   {
     path: "/dashboard/users",
-    component: "This is users",
+    component: Users,
   },
   {
     path: "/dashboard/settings",

@@ -1,0 +1,25 @@
+.dataListExtras {
+  min-height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dataListFooter {
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.addNewUser{
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 13px;
+  background: #553FFB;
+  margin: 0.5rem 0px;
+  border-radius: 6px;
+}
+.addNewUser span{
+  margin-left: 15px;
+}
