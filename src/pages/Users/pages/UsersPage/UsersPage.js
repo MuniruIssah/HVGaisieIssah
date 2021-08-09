@@ -9,7 +9,7 @@ import {
 import "./styles.css";
 const UsersProfile = () => {
   return (
-    <div className="financePage">
+    <div className="dashboardPage">
       <h1>Users</h1>
       <div className="financeContent">
         <DataList />

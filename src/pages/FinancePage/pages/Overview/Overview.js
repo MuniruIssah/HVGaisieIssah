@@ -72,7 +72,7 @@ const SideBarChart = () => (
 
 const Overview = () => {
   return (
-    <div className="financePage">
+    <div className="dashboardPage">
       <h1>Finance - <span>Overview</span></h1>
       <FinanceCard
         sideGraph={<SideBarChart />}

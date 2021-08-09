@@ -1,0 +1,22 @@
+.goBack {
+  background: #e3e7ed;
+  border-radius: 6px;
+  border: none;
+  width: 100px;
+  padding: 0px 15px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.goBack div {
+  width: 14px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.goBack span {
+  font-size: 12px;
+  font-weight: 700;
+}

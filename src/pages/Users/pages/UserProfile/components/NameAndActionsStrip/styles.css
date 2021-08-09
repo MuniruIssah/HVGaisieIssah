@@ -1,0 +1,12 @@
+.nameAndActionsStrip {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameAndActionsStrip span {
+  color: #040a1d;
+  font-weight: 900;
+  font-size: 40px;
+}

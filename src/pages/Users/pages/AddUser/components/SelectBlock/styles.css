@@ -1,0 +1,71 @@
+.selectMain {
+  width: 415px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #e3e7ed;
+  border-radius: 6px;
+  text-align: left;
+  padding: 5px 15px;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+}
+.selectMain .selectMainLabel {
+  font-size: 18px;
+  font-weight: 300;
+  color: #8892a2;
+}
+.selectBlock {
+  position: relative;
+}
+.selectBlock .selectList {
+  width: 574px;
+  z-index: 1;
+  height: 206px;
+  position: absolute;
+  padding: 15px 20px;
+  top: 70px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  overflow: scroll;
+  box-shadow: 0px 0px 32px rgba(136, 152, 170, 0.15);
+  border-radius: 6px;
+}
+
+.selectBlock .selectList .selectItem {
+  width: 100%;
+  height: 52px;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 10px;
+  padding: 3px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.selectBlock .selectList .selectItem:hover {
+  background: rgb(85, 63, 251, 0.1);
+}
+
+.selectBlock .selectList .selectItem span:first-child {
+  font-weight: 500;
+  font-size: 16px;
+  color: #040a1d;
+}
+
+.selectBlock .selectList .selectItem span:last-child {
+  font-size: 12px;
+  color: #8892a2;
+}
+
+.activeSelectItem {
+  background: rgb(85, 63, 251, 0.1);
+}
+
+.selectMain .selectedLabel {
+  font-size: 12px;
+  line-height: 16px;
+  color: #8892a2;
+}

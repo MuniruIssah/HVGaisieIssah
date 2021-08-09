@@ -1,7 +1,7 @@
 .dashboardPage {
   display: flex;
   flex-direction: column;
-  padding: 1.5%;
+  padding: 1.5% 3.5%;
   flex-wrap: wrap;
 }
 .dashboardPage h1 {

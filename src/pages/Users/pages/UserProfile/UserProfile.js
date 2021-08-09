@@ -1,11 +1,17 @@
 import React from "react";
+import GoBack from "../../components/GoBack/GoBack";
+import LoginSession from "./components/LoginSession/LoginSession";
+import NameAndActionsStrip from "./components/NameAndActionsStrip/NameAndActionsStrip";
+import UserDetailsBlock from "./components/UserDetailsBlock/UserDetailsBlock";
 import "./styles.css";
-
 
 const UserProfile = () => {
   return (
-    <div className="financePage">
-      <h1>User Profile</h1>
+    <div className="dashboardPage">
+      <GoBack />
+      <NameAndActionsStrip />
+      <UserDetailsBlock />
+      <LoginSession />
     </div>
   );
 };

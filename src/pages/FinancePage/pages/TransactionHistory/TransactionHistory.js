@@ -9,7 +9,7 @@ import {
 import "./styles.css";
 const TransactionHistory = () => {
   return (
-    <div className="financePage">
+    <div className="dashboardPage">
       <h1>
         Finance - <span>Transaction History</span>
       </h1>

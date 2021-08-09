@@ -80,7 +80,7 @@ const FinanceDataListTableItem = ({ item }) => {
 
           <div style={{display:'flex',alignItems:'center'}}>
           <span>{item.STATUS}</span>
-          <div className={` status ${item.STATUS === "Active" ? "paid" : "cancelled"}`}></div>
+          <div className={` userStatus ${item.STATUS === "Active" ? "paid" : "cancelled"}`}></div>
           </div>
         </td>
         <td>
