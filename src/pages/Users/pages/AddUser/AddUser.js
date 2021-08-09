@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import GoBack from "../../components/GoBack/GoBack";
-import InputBlock from "./components/InputBlock/InputBlock";
-import SelectBlock from "./components/SelectBlock/SelectBlock";
-
+import NewUserForm from "./components/NewUserForm/NewUserForm";
 const AddUser = () => {
   return (
     <div className="dashboardPage">
@@ -16,17 +14,9 @@ const AddUser = () => {
       >
         Add New User
       </h1>
-      <InputBlock />
-      <InputBlock label="Last Name" />
-      <InputBlock label="Phone Number"/>
-      <InputBlock label="Password" type="password" />
-      <SelectBlock />
+      <NewUserForm/>
     </div>
   );
 };
 
 export default AddUser;
-
-
-
-

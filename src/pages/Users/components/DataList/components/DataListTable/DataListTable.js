@@ -5,30 +5,34 @@ import { faEdit, faEye, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 import DataListModal from "../../../DataListInvoiceModal/DataListInvoiceModal";
 import Invoice from "../../../Invoice/Invoice";
 import { faPen, faPenAlt } from "@fortawesome/free-solid-svg-icons";
+import { useHistory, useRouteMatch } from "react-router-dom";
 const dummyList = [
   {
-    NAME: "wwwww",
+    NAME: "Issah",
     PHONE_NUMBER: "29292939",
     ACCOUNT_TYPE: "Kwame",
     STATUS: "Active",
   },
   {
-    NAME: "wwwww",
+    NAME: "Muniru",
     PHONE_NUMBER: "29292939",
     ACCOUNT_TYPE: "Kwame",
     STATUS: "Inactive",
   },
   {
-    NAME: "wwwww",
+    NAME: "Daddah",
     PHONE_NUMBER: "29292939",
     ACCOUNT_TYPE: "Kwame",
     STATUS: "Active",
   },
 ];
 const DataListTable = ({ list = dummyList }) => {
+
   return (
     <table className="dataListTable">
-      <FinanceDataListTableHeader headerList={Object.keys(list[0])} />
+      <FinanceDataListTableHeader
+        headerList={["NAME", "PHONE NUMBER", "ACCOUNT TYPE", "STATUS"]}
+      />
       <FinanceDataListTableMain list={list} />
     </table>
   );
@@ -63,41 +67,53 @@ const FinanceDataListTableMain = ({ list }) => {
 
 const FinanceDataListTableItem = ({ item }) => {
   const [visible, setVisible] = useState(false);
+  const { path } = useRouteMatch();
+  const history=useHistory()
   return (
     <>
       <tr className="dataListTableItem">
         <td>
           <div className="tableCheck"></div>
         </td>
-        <td>{item.NAME}</td>
+        <td>
+          <div className="username">
+            <div
+              className="avatar"
+              style={{ backgroundImage: `url(${item.IMAGE})` }}
+            ></div>
+            <span>{item.NAME}</span>
+          </div>
+        </td>
         <td>{item.PHONE_NUMBER}</td>
         <td>{item.ACCOUNT_TYPE}</td>
         <td
           // className={` status ${item.STATUS === "Active" ? "paid" : "cancelled"}`}
-          style={{position:'relative'}}
+          style={{ position: "relative" }}
         >
           {" "}
-
-          <div style={{display:'flex',alignItems:'center'}}>
-          <span>{item.STATUS}</span>
-          <div className={` userStatus ${item.STATUS === "Active" ? "paid" : "cancelled"}`}></div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <span>{item.STATUS}</span>
+            <div
+              className={` userStatus ${
+                item.STATUS === "Active" ? "paid" : "cancelled"
+              }`}
+            ></div>
           </div>
         </td>
         <td>
           <button
-            onClick={() => setVisible(true)}
             className="tableActionButton"
           >
             <FontAwesomeIcon icon={faTrashAlt} />
           </button>
           <button
-            onClick={() => setVisible(true)}
+
             className="tableActionButton"
           >
             <FontAwesomeIcon icon={faPen} />
           </button>
           <button
-            onClick={() => setVisible(true)}
+            onClick={() => history.push(`${path}/${item.NAME}`)}
             className="tableActionButton"
           >
             <FontAwesomeIcon icon={faEye} />

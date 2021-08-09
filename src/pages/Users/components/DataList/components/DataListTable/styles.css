@@ -49,6 +49,21 @@
   background: #ffffff;
 }
 
+/* Username td */
+.username {
+  display: flex;
+  align-items: center;
+}
+.username .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 15px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* .dataListTable .tableHeader th:last-child {
   padding-left: 3%;
 } */
