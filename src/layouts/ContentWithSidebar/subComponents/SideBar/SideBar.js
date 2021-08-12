@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import logo from "../../../../assets/logo.png";
+import logo from "../../../../assets/logo.svg";
 import SideBarButton from "./SideBarComponents/SideBarButton/SideBarButton";
 const HVSideBar = ({ sideBarButtons }) => {
   return (

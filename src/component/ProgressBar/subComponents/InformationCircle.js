@@ -15,11 +15,11 @@ export const InformationCircle = ({ instructions }) => {
   const toggle = () => setPopoverOpen(!popoverOpen);
   return (
     <>
-      <FontAwesomeIcon
+      <div
         id="Popover1"
         className="progressIcon"
         icon={faInfoCircle}
-      />
+      ></div>
       <Popover
         style={PopOverStyles}
         placement="bottom"

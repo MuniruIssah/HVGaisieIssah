@@ -82,7 +82,7 @@
 }
 
 .invoiceIssueStrip .appLogoSection {
-  background-image: url(../../assets/hopeVoiceLogo.png);
+  background-image: url(../../../../assets/logo.svg);
   height: 50px;
   width: 90px;
   background-size: contain;

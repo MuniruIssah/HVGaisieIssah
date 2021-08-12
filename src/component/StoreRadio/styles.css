@@ -54,7 +54,7 @@
   border: 1px solid gainsboro;
   height: 50px;
   background: grey;
-  background-image: url('./../../assets/logo.png');
+  background-image: url('./../../assets/logo.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

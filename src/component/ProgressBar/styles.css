@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  margin-bottom:0.6rem ;
+  margin-bottom: 0.6rem;
 }
 .innerProgressWrapper {
   display: flex;
@@ -11,15 +11,18 @@
 }
 
 .progressIcon {
-  color: #fbbc05;
-  margin-left: 7px;
-  font-size: 11px;
+  width: 13px;
+  height: 13px;
+  background-image: url(../../assets/infoCircle.svg);
+  margin-left: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
-.progressAlert{
-    font-size: 12px;
+.progressAlert {
+  font-size: 12px;
 }
-.progressAlertStrip{
-    text-align: left;
+.progressAlertStrip {
+  text-align: left;
 }

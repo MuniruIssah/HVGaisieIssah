@@ -1,6 +1,7 @@
 .eyeButton {
   background: transparent;
   border: none;
+  height: 100%;
 }
 .passwordIcon{
     color: rgb(168, 168, 168);

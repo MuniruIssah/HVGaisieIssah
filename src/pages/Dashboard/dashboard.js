@@ -1,7 +1,7 @@
 import React from "react";
 import ContentWithSidebarLayout from "../../layouts/ContentWithSidebar/ContentWithSidebarLayout";
 import { mainContent, SideBarContent } from "../../utils/dashboardContentProps";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 
 const HVDashboard = () => {
   return (

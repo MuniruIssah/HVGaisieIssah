@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { DateRange } from "react-date-range";
-import logo from "./../../assets/logo.png";
+import logo from "./../../assets/logo.svg";
 import DashBoardCard from "./components/DashboardCard/DashboardCard";
 import TwoColumnLayout from "./sectionLayouts/TwoColumnLayout/TwoColumnLayout";
 import "./styles.css";

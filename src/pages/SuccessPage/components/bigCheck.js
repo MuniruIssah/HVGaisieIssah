@@ -4,6 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle} from "@fortawesome/free-solid-svg-icons";
 export const BigCheck = () => {
     return (
-        <FontAwesomeIcon icon={faCheckCircle} className='successIcon' />
+        <div className='successIcon' ></div>
     )
 }

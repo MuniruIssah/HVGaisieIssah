@@ -1,3 +1,4 @@
+import {getCountryListMap} from "country-flags-dial-code"
 //Handle Phone Form Submission
 export const handleFormSubmission = (phoneNumber, phoneNumberCode) => {
   let regex = /[A-Za-z]/gi;
@@ -89,3 +90,6 @@ export const handleCodeVerification=(code)=>{
   return {alertMessage,status}
 }
 
+export const countryCodesAndFlags=()=>{
+  return getCountryListMap()
+}

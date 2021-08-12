@@ -12,6 +12,7 @@ const NumberCodes = ({ onChange }) => {
         length={4}
         onChange={handleChange}
         validChars="0-9"
+        placeholder=""
         removeDefaultStyles
         classNames={{
           container: "container",

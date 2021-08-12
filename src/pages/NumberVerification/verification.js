@@ -35,7 +35,7 @@ const VerificationForm = () => {
   };
   return (
     <form onSubmit={handleFormSubmission}>
-      <span className="bolder formHeader vfHeader">Verification</span>
+      <span className="bolder formHeader vfHeader">Verify Number</span>
       <DescriptionStrip
         description="Please enter verification code sent to"
         type="vfLabel"
@@ -61,7 +61,7 @@ const VerificationForm = () => {
 const Verification = () => {
   return (
     <WhiteCenterLayout>
-      <GreyForm header="Change Number">
+      <GreyForm header="Change Number" style={{padding:"20px 45px"}}>
         <VerificationForm />
       </GreyForm>
     </WhiteCenterLayout>

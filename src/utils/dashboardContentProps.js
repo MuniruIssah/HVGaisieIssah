@@ -10,26 +10,26 @@ import {
   faTruckMoving,
 } from "@fortawesome/free-solid-svg-icons";
 // Importing all The Sidebar Logos
-import DashboardActive from "../assets/HV/Dashboard/iccon/active.png";
-import DashboardInactive from "../assets/HV/Dashboard/iccon/inactive.png";
-import OrderActive from "../assets/HV/Order/iccon/active.png";
-import OrderInactive from "../assets/HV/Order/iccon/inactive.png";
-import FinanceActive from "../assets/HV/Finance/iccon/active.png";
-import FinanceInactive from "../assets/HV/Finance/iccon/inactive.png";
-import InventoryActive from "../assets/HV/Inventory/iccon/active.png";
-import InventoryInactive from "../assets/HV/Inventory/iccon/inactive.png";
-import CustomersActive from "../assets/HV/Customers/iccon/active.png";
-import CustomersInactive from "../assets/HV/Customers/iccon/inactive.png";
-import LogisticsActive from "../assets/HV/Delivery/iccon/active.png";
-import LogisticsInactive from "../assets/HV/Delivery/iccon/inactive.png";
-import ProductsActive from "../assets/HV/Products/iccon/active.png";
-import ProductsInactive from "../assets/HV/Products/iccon/inactive.png";
-import CouponActive from "../assets/HV/Coupon/iccon/active.png";
-import CouponInactive from "../assets/HV/Coupon/iccon/inactive.png";
-import UsersActive from "../assets/HV/Users/iccon/active.png";
-import UsersInactive from "../assets/HV/Users/iccon/inactive.png";
-import SettingsActive from "../assets/HV/Settings/iccon/active.png";
-import SettingsInactive from "../assets/HV/Settings/iccon/inactive.png";
+import DashboardActive from "../assets/HV/Dashboard/iccon/active.svg";
+import DashboardInactive from "../assets/HV/Dashboard/iccon/inactive.svg";
+import OrderActive from "../assets/HV/Order/iccon/active.svg";
+import OrderInactive from "../assets/HV/Order/iccon/inactive.svg";
+import FinanceActive from "../assets/HV/Finance/iccon/active.svg";
+import FinanceInactive from "../assets/HV/Finance/iccon/inactive.svg";
+import InventoryActive from "../assets/HV/Inventory/iccon/active.svg";
+import InventoryInactive from "../assets/HV/Inventory/iccon/inactive.svg";
+import CustomersActive from "../assets/HV/Customers/iccon/active.svg";
+import CustomersInactive from "../assets/HV/Customers/iccon/inactive.svg";
+import LogisticsActive from "../assets/HV/Delivery/iccon/active.svg";
+import LogisticsInactive from "../assets/HV/Delivery/iccon/inactive.svg";
+import ProductsActive from "../assets/HV/Products/iccon/active.svg";
+import ProductsInactive from "../assets/HV/Products/iccon/inactive.svg";
+import CouponActive from "../assets/HV/Coupon/iccon/active.svg";
+import CouponInactive from "../assets/HV/Coupon/iccon/inactive.svg";
+import UsersActive from "../assets/HV/Users/iccon/active.svg";
+import UsersInactive from "../assets/HV/Users/iccon/inactive.svg";
+import SettingsActive from "../assets/HV/Settings/iccon/active.svg";
+import SettingsInactive from "../assets/HV/Settings/iccon/inactive.svg";
 
 import DashboardPage from "../pages/DashboardPage/DashboardPage";
 import FinancePage from "../pages/FinancePage/FinancePage";

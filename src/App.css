@@ -45,6 +45,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100vw;
 }
@@ -56,13 +57,14 @@
 .bolder {
   font-weight: 700;
 }
-.light{
-  font-weight:lighter;
-  color: #848ca7
+.light {
+  font-weight: lighter;
+  color: #848ca7;
 }
 .description {
   font-weight: 400;
   color: #8892a2;
+  font-family: "Open Sans", sans-serif;
 }
 .formHeader {
   margin-bottom: 15px;
@@ -76,14 +78,28 @@
   margin-top: 1rem;
   width: 100%;
 }
-
+.input-group {
+  border: 1px solid #e3e7ed;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.02),
+    0px 1px 3px rgba(50, 50, 93, 0.15);
+  border-radius: 6px;
+}
+.input-group:focus-within {
+  border: 3px solid rgba(71, 125, 251, 0.4);
+}
 /* prepend input  */
 .input-group-prepend .input-group-text {
   background-color: white;
   border-radius: 6px 0px 0px 6px;
 }
-.input-group-text .form-control {
-  border: none;
+.input-group-text {
+  border: none !important;
+}
+.form-control {
+  border: none !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
 }
 
 /* append input  */
@@ -95,11 +111,11 @@
 /* form global styles */
 .formDescription {
   font-size: 14px;
-  width: 70%;
+  width: 80%;
 }
 .formHeader {
   font-size: 18px;
-  color: #040A1D;
+  color: #040a1d;
 }
 
 label {
@@ -107,30 +123,28 @@ label {
   color: #3d4356;
 }
 
-.vfLabel{
-  color:#3D4356;
+.vfLabel {
+  color: #3d4356;
 }
 
-
-
- .progress{
-  background-color: #E1E4E7 !important;
+.progress {
+  background-color: #e1e4e7 !important;
   height: 5px !important;
   border-radius: 10px;
 }
-.progress-bar{
+.progress-bar {
   /* background-color: #11CDEF !important;
    */
-   background-color: var(--progress-color) !important;
+  background-color: var(--progress-color) !important;
   border-radius: 10px !important;
 }
 
-.popover{
-  background-color: transparent  !important;
+.popover {
+  background-color: transparent !important;
   border: none !important;
 }
 
-.successDescription{
+.successDescription {
   font-size: 16px;
   margin-bottom: 2rem;
 }
@@ -139,4 +153,3 @@ label {
 *::after {
   box-sizing: border-box;
 }
-

@@ -2,7 +2,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useHistory } from "react-router-dom";
-import back from '../../assets/back.png'
+import back from '../../../../assets/back.svg'
 import "./styles.css"
 const GoBack = () => {
   const history=useHistory()

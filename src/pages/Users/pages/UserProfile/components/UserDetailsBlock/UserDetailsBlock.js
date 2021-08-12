@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import logo from "../../../../assets/hopeVoiceLogo.png"
+import logo from "../../../../../../assets/logo.svg"
 const UserDetailsBlock = () => {
   return (
     <div className="userDetailsBlock">

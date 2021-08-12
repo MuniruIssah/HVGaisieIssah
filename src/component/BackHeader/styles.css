@@ -9,7 +9,7 @@
 .backHeader button{
     background-color:transparent ;
     border: none;
-    font-size: 12px;
+    font-size: 13px;
     display: flex;
     
     align-items: center;
@@ -17,6 +17,12 @@
 }
 
 .backHeaderIcon{
-    margin-right:7px;
+    margin-right:12px;
     font-size: 14px;
+    width: 18px;
+    height: 14px;
+    background-image: url(../../assets/back.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
