@@ -9,10 +9,10 @@ const PasswordField = ({onChange,onSelect}) => {
       onChange(e)
     }
     return (
-        <InputGroup>
+        <InputGroup style={{height:54}}>
         <Input  type={passwordType?'password':'text'}  placeholder="New Password"  onChange={handleChange} required />
         <InputGroupAddon addonType='append' >
-          <InputGroupText>
+          <InputGroupText style={{height:'100%'}}>
             <button type='button' onClick={()=>setPasswordType(!passwordType)}  className='eyeButton'><FontAwesomeIcon className='passwordIcon' icon={passwordType?faEyeSlash:faEye} /></button>
           </InputGroupText>
         </InputGroupAddon>
