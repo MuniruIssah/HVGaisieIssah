@@ -1,36 +1,17 @@
 .hvHeader {
   display: flex;
   width: 100vw;
-  padding: 30px;
+  padding: 38px 46px 0px;
   justify-content: flex-start;
   position: fixed;
   top: 0;
 }
 
 .appIcon {
-  display: flex;
-  flex-direction: column;
-  width: 6.4ch;
-  position: relative;
-  height: 35px;
-  padding: 1px;
+  height: 40px;
+  width: 80px;
+  background-image: url(../../assets/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.appIcon span {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.appIcon :last-child {
-  line-height: 0.15;
-  margin-left: 1.2ch;
-}
-.appDot {
-  width: 6.5px;
-  background-color: #553ffb;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  height: 6.5px;
-}
-

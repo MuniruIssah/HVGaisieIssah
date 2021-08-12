@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-
+import logo from "../../assets/logo.png"
 const AppDot = () => {
   return <div className="appDot"></div>;
 };
@@ -8,9 +8,7 @@ const AppDot = () => {
 export const AppIcon = () => {
   return (
     <div className="appIcon">
-      <AppDot />
-      <span>Hope</span>
-      <span>Voice</span>
+      
     </div>
   );
 };
