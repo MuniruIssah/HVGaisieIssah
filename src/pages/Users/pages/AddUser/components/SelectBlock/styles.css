@@ -1,10 +1,11 @@
 .selectMain {
-  width: 415px;
-  height: 60px;
+  /* width: ; */
+  height: 50px;
   background: #ffffff;
   border: 1px solid #e3e7ed;
   border-radius: 6px;
   text-align: left;
+
   padding: 5px 15px;
   display: flex;
   z-index: 2;
@@ -12,7 +13,7 @@
   justify-content: center;
 }
 .selectMain .selectMainLabel {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   color: #8892a2;
 }
@@ -20,7 +21,7 @@
   position: relative;
 }
 .selectBlock .selectList {
-  width: 574px;
+  width: 110%;
   z-index: 1;
   height: 206px;
   position: absolute;
@@ -36,13 +37,13 @@
 
 .selectBlock .selectList .selectItem {
   width: 100%;
-  height: 52px;
   border-radius: 5px;
   display: flex;
   margin-bottom: 10px;
   padding: 3px 20px;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   justify-content: center;
 }
 .selectBlock .selectList .selectItem:hover {

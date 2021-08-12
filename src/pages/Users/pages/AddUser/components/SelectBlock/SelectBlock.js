@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./styles.css";
 const dummySelectList = [
   {
@@ -26,12 +26,12 @@ const dummySelectList = [
     address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
   },
 ];
-const SelectBlock = ({ label = "Store", list = dummySelectList }) => {
+const SelectBlock = ({ label = "Store", list = dummySelectList, small }) => {
   const [showList, setShowList] = useState(false);
   const [selected, setSelected] = useState("");
   const handleShowList = () => setShowList(!showList);
   return (
-    <div className="selectBlock">
+    <div className={`selectBlock`} style={{ width: small ? "285px" : "415px" }}>
       <div className="selectMain" onClick={handleShowList}>
         <label
           className={`selectMainLabel ${

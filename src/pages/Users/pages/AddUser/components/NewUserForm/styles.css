@@ -15,12 +15,29 @@
 
 .addAStore {
   width: 100%;
-  border: 1px solid #E3E7ED;
+  border: 1px solid #e3e7ed;
   background: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  color: #8892A2;
+  color: #8892a2;
+}
+.storeSection {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.deleteStore {
+  position: absolute;
+  width: 30px;
+  background-color: white;
+  right: -40px;
+  top: 10px;
+  height: 30px;
+  border: 1px solid #e3e7ed;
+  box-sizing: border-box;
+  border-radius: 6px;
 }
 
 .personalDetailsSection {
@@ -42,7 +59,7 @@
 .profileImageSection span {
   font-size: 12px;
   text-align: center;
-    margin-top: 5px;
+  margin-top: 5px;
   color: #8898aa;
 }
 .profileImageSection .profileImageSectionIcon {
