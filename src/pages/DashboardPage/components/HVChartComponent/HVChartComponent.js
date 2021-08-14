@@ -41,12 +41,9 @@ const data2 = {
 };
 
 var chartOptions = {
-  legend: {
-    display: true,
-    position: "top",
-    labels: {
-      boxWidth: 80,
-      fontColor: "green",
+  plugins: {
+    legend: {
+      display: false,
     },
   },
   scales: {
