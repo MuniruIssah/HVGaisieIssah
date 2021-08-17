@@ -73,20 +73,13 @@ const SideBarChart = () => (
 const Overview = () => {
   return (
     <div className="dashboardPage">
-      <h1>Finance - <span>Overview</span></h1>
-      <FinanceCard
-        sideGraph={<SideBarChart />}
-        dates
-        dateToday={true}
-      >
+      <h1>
+        Finance - <span>Overview</span>
+      </h1>
+      <FinanceCard sideGraph={<SideBarChart />} dates dateToday={true}>
         <LabelAndValueStrip list={labelandValue} />
       </FinanceCard>
-      <FinanceCard
-        select
-        largeHeader
-        title="Revenue Growth"
-        dates
-      >
+      <FinanceCard select largeHeader title="Revenue Growth" dates>
         <HVChartComponent
           data={FinanceRevenueChartData}
           options={optionTypes.options1}
@@ -116,5 +109,3 @@ const Overview = () => {
 };
 
 export default Overview;
-
-
