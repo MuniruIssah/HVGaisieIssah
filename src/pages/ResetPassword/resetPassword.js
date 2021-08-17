@@ -34,9 +34,9 @@ const ResetPasswordForm = () => {
   };
 
   //Handle Country Code Change
-  const handlePhoneNumberCodeChange = (e) => {
-    setPhoneNumberCode(e.target.value);
-    console.log(e.target.value);
+  const handlePhoneNumberCodeChange = (number) => {
+    setPhoneNumberCode(number);
+    console.log(number);
   };
 
   return (
