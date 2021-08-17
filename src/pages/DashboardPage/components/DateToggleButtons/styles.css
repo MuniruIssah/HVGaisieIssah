@@ -1,5 +1,6 @@
 .dateToggleButtons {
   display: flex;
+  margin-left: 0px !important;
 }
 
 .dateToggleButton {
@@ -19,6 +20,11 @@
 }
 
 .active {
+  background: #553ffb10;
+  color: #553ffb;
+}
+
+.dateToggleButton:hover{
   background: #553ffb10;
   color: #553ffb;
 }

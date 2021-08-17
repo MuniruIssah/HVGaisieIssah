@@ -4,7 +4,7 @@ const NumberOnlyList = ({ list }) => {
   return (
     <ul className="numberOnlyList">
       {list.map((item) => (
-        <li><span>{item.title}</span><span className="moneySection">{item.title}</span></li>
+        <li><span>{item.name}</span><span className="moneySection">{item.title}</span></li>
       ))}
     </ul>
   );

@@ -13,6 +13,33 @@
   text-align: left;
   color: #040a1d;
 }
+
+.topThreeLabels {
+  display: flex;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.topThreeLabels .topThreeLabel {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+.topThreeLabels .topThreeLabel span {
+  display: block;
+  text-align: left;
+}
+.topThreeLabels .topThreeLabel span:first-child {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 6px;
+  color: #8892a2;
+}
+.topThreeLabels .topThreeLabel span:last-child {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: #38c985;
+}
 /* 
 .rdt {
   position: relative;
@@ -42,7 +69,7 @@
   z-index: 99999 !important;
   background: #fff;
   border-radius: 0.375rem;
-  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 50px 0px rgba(0; 0; 0; 0.2);
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   min-width: 292px;
@@ -93,7 +120,7 @@
   border-color: #fff !important;
 }
 
-.rdtPicker td,
+.rdtPicker td;
 .rdtPicker th {
   text-align: center;
   padding: 1px;
@@ -112,14 +139,14 @@
   border: none;
   border-radius: 6px;
 }
-.rdtDay.rdtToday.rdtActive,
-.rdtDay.rdtActive,
-.rdtDay.rdtActive:hover,
-.rdtDay.start-date,
-.rdtDay.end-date,
-.rdtDay.middle-date,
-.rdtDay.start-date:hover,
-.rdtDay.end-date:hover,
+.rdtDay.rdtToday.rdtActive;
+.rdtDay.rdtActive;
+.rdtDay.rdtActive:hover;
+.rdtDay.start-date;
+.rdtDay.end-date;
+.rdtDay.middle-date;
+.rdtDay.start-date:hover;
+.rdtDay.end-date:hover;
 .rdtDay.middle-date:hover {
   background-color: #553ffb !important;
   color: #fff !important;
@@ -152,17 +179,17 @@
   color: #525f7f;
   font-size: 0.875rem;
 }
-.rdtDays tr .rdtDay.rdtOld,
+.rdtDays tr .rdtDay.rdtOld;
 .rdtDays tr .rdtDay.rdtNew {
   color: #adb5bd;
   font-weight: 300;
 }
 
-.rdtPicker td.rdtDay:hover,
-.rdtPicker td.rdtHour:hover,
-.rdtPicker td.rdtMinute:hover,
-.rdtPicker td.rdtSecond:hover,
-.rdtPicker .rdtTimeToggle:hover,
+.rdtPicker td.rdtDay:hover;
+.rdtPicker td.rdtHour:hover;
+.rdtPicker td.rdtMinute:hover;
+.rdtPicker td.rdtSecond:hover;
+.rdtPicker .rdtTimeToggle:hover;
 .rdtPicker .rdtTimeToggle:hover:before {
   background: #eeeeee;
   cursor: pointer;
@@ -176,7 +203,7 @@
   border-bottom-color: #fff;
 }
 
-.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled;
 .rdtPicker td.rdtDisabled:hover {
   background: none;
   color: #999999;
@@ -187,7 +214,7 @@
   color: #999999;
 }
 
-.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled;
 .rdtPicker td span.rdtDisabled:hover {
   background: none;
   color: #999999;
@@ -218,7 +245,7 @@
   border: none;
 }
 
-.rdtPicker th.rdtNext,
+.rdtPicker th.rdtNext;
 .rdtPicker th.rdtPrev {
   font-size: 0.875rem;
   width: 36px;
@@ -230,15 +257,15 @@
   cursor: pointer;
 }
 
-.rdtPicker .dow,
-.rdtPicker th.rdtSwitch,
-.rdtPicker th.rdtNext,
-.rdtPicker th.rdtPrev,
+.rdtPicker .dow;
+.rdtPicker th.rdtSwitch;
+.rdtPicker th.rdtNext;
+.rdtPicker th.rdtPrev;
 .rdtPicker .rdtTimeToggle {
   color: #525f7f;
 }
 
-.rdtPrev span,
+.rdtPrev span;
 .rdtNext span {
   display: block;
   -webkit-touch-callout: none;
@@ -254,7 +281,7 @@
   user-select: none;
 }
 
-.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled;
 .rdtPicker th.rdtDisabled:hover {
   background: none;
   color: #999999;
@@ -284,14 +311,14 @@
   height: 100%;
 }
 
-td.rdtMonth,
+td.rdtMonth;
 td.rdtYear {
   height: 50px;
   width: 25%;
   cursor: pointer;
 }
 
-td.rdtMonth:hover,
+td.rdtMonth:hover;
 td.rdtYear:hover {
   background: #eee;
 }
@@ -384,13 +411,13 @@ td.rdtYear:hover {
   margin-top: 37px;
 }
 
-.rdtMonths,
+.rdtMonths;
 .rdtYears {
   padding-bottom: 10px;
 }
-.rdtMonths .rdtMonth,
-.rdtMonths .rdtYear,
-.rdtYears .rdtMonth,
+.rdtMonths .rdtMonth;
+.rdtMonths .rdtYear;
+.rdtYears .rdtMonth;
 .rdtYears .rdtYear {
   display: inline-block;
   width: 56px;
@@ -401,21 +428,21 @@ td.rdtYear:hover {
   border-radius: 50%;
   text-align: center;
 }
-.rdtMonths .rdtMonth.rdtActive,
-.rdtMonths .rdtMonth.start-date,
-.rdtMonths .rdtMonth.end-date,
-.rdtMonths .rdtMonth.middle-date,
-.rdtMonths .rdtYear.rdtActive,
-.rdtMonths .rdtYear.start-date,
-.rdtMonths .rdtYear.end-date,
-.rdtMonths .rdtYear.middle-date,
-.rdtYears .rdtMonth.rdtActive,
-.rdtYears .rdtMonth.start-date,
-.rdtYears .rdtMonth.end-date,
-.rdtYears .rdtMonth.middle-date,
-.rdtYears .rdtYear.rdtActive,
-.rdtYears .rdtYear.start-date,
-.rdtYears .rdtYear.end-date,
+.rdtMonths .rdtMonth.rdtActive;
+.rdtMonths .rdtMonth.start-date;
+.rdtMonths .rdtMonth.end-date;
+.rdtMonths .rdtMonth.middle-date;
+.rdtMonths .rdtYear.rdtActive;
+.rdtMonths .rdtYear.start-date;
+.rdtMonths .rdtYear.end-date;
+.rdtMonths .rdtYear.middle-date;
+.rdtYears .rdtMonth.rdtActive;
+.rdtYears .rdtMonth.start-date;
+.rdtYears .rdtMonth.end-date;
+.rdtYears .rdtMonth.middle-date;
+.rdtYears .rdtYear.rdtActive;
+.rdtYears .rdtYear.start-date;
+.rdtYears .rdtYear.end-date;
 .rdtYears .rdtYear.middle-date {
   background-color: #553ffb !important;
   color: #fff;

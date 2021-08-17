@@ -10,7 +10,7 @@ const DashboardCardHeader = ({ title, dates, large }) => {
           {title}
         </span>
       )}
-      {dates && <DateToggleButtons dateClasses={dates} />}
+      {dates && <DateToggleButtons/>}
     </header>
   );
 };

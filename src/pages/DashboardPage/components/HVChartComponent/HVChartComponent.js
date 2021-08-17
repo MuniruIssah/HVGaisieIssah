@@ -41,12 +41,9 @@ const data2 = {
 };
 
 var chartOptions = {
-  legend: {
-    display: true,
-    position: "top",
-    labels: {
-      boxWidth: 80,
-      fontColor: "green",
+  plugins: {
+    legend: {
+      display: false,
     },
   },
   scales: {
@@ -72,12 +69,9 @@ var chartOptions = {
   },
 };
 var chartOptions2 = {
-  legend: {
-    display: true,
-    position: "left",
-    labels: {
-      boxWidth: 80,
-      fontColor: "green",
+  plugins: {
+    legend: {
+      display: false,
     },
   },
   scales: {
@@ -92,10 +86,10 @@ var chartOptions2 = {
   },
 };
 
-const HVChartComponent = ({ multi }) => (
-  <div className="chartWrapper">
+const HVChartComponent = ({ multi,height }) => (
+  <div className="chartWrapper" style={{height:height}}>
     {!multi && (
-      <Line data={data} options={chartOptions} width={0.3} height={0.1} />
+      <Line  data={data} options={chartOptions} width={0.3} height={0.1} />
     )}
     {multi && (
       <Line data={data2} options={chartOptions2} width={0.3} height={0.1} />
