@@ -5,7 +5,8 @@ const data = {
   labels: ["1", "2", "3", "4", "5", "6"],
   datasets: [
     {
-      label: "# of Wahever",
+      radius: 1,
+      pointStyle: "line",
       data: [5, 4, 6, 5, 10, 3],
       fill: true,
       backgroundColor: "#553FFB20",
@@ -17,6 +18,8 @@ const data2 = {
   labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat","Sun"],
   datasets: [
     {
+      radius: 1,
+      pointStyle: "line",
       label: "Vehicle 1",
       data: [5, 4, 7, 6, 10, 7,2],
       fill: true,
@@ -24,6 +27,8 @@ const data2 = {
       borderColor: "#38C985",
     },
     {
+      radius: 1,
+      pointStyle: "line",
       label: "Vehicle 2",
       data: [13, 6, 10, 15, 4, 7,1],
       fill: true,
@@ -31,6 +36,8 @@ const data2 = {
       borderColor: "#FF4127",
     },
     {
+      radius: 1,
+      pointStyle: "line",
       label: "Vehicle 3",
       data: [5, 7, 9, 18, 1, 8,9],
       fill: true,

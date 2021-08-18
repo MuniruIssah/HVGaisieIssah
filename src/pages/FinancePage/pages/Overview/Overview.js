@@ -12,6 +12,10 @@ import NumberOnlyList from "../../components/ItemsList/NumberOnlyList/NumberOnly
 import LabelAndValueStrip from "../../components/LabelAndValueStrip/LabelAndValueStrip";
 import HVChartComponent from "../../components/HVChartComponent/HVChartComponent";
 import { Bar } from "react-chartjs-2";
+import {
+  topFiveCustomers,
+  vehicleRevenues,
+} from "../../financeUtils/overviewLists";
 
 const RevenueList = [
   {
@@ -50,24 +54,37 @@ const labelandValue = [
   },
 ];
 
-const SideBarChart = () => (
-  <Bar
-    data={{
-      labels: ["Mobile Money", "Bank Transfer", "Cash"],
-      datasets: [
-        {
-          label: "Rainfall",
-          backgroundColor: ["#553FFB20", " #FF412720", "#38C98520"],
-          borderColor: ["#553FFB", "#FF4127", "#38C985"],
-          borderWidth: { top: 3, right: 0, bottom: 0, left: 0 },
-          data: [65, 10, 76],
-          barPercentage: 1.0,
-          categoryPercentage: 1.0,
-        },
-      ],
-    }}
-    options={optionTypes.barChartoptions}
-  />
+const SideBarChart = ({ title = "Payment Gateway" }) => (
+  <div style={{height:'100%'}}>
+    <span
+      style={{
+        display: "block",
+        textAlign: "left",
+        fontSize: 14,
+        margin:'10px 0px',
+        color: "#8892A2",
+      }}
+    >
+      {title}
+    </span>
+    <Bar
+      data={{
+        labels: ["Mobile Money", "Bank Transfer", "Cash"],
+        datasets: [
+          {
+            label: "Payment Gateway",
+            backgroundColor: ["#553FFB20", " #FF412720", "#38C98520"],
+            borderColor: ["#553FFB", "#FF4127", "#38C985"],
+            borderWidth: { top: 3, right: 0, bottom: 0, left: 0 },
+            data: [65, 10, 76],
+            barPercentage: 1.0,
+            categoryPercentage: 1.0,
+          },
+        ],
+      }}
+      options={optionTypes.barChartoptions}
+    />
+  </div>
 );
 
 const Overview = () => {
@@ -88,8 +105,9 @@ const Overview = () => {
       <FinanceColumnLayout grid="1fr 1fr 1fr">
         {ThreeColumnFinanceChartData.map((item) => (
           <FinanceCard title={item.title}>
-            <h2 style={{ margin: 0, textAlign: "left" }}>{item.largeHeader}</h2>
+            <h2 style={{ margin: 0, textAlign: "left",marginBottom:'2rem' }}>{item.largeHeader}</h2>
             <HVChartComponent
+            height='150px'
               data={item.chartData}
               options={optionTypes.options2}
             />
@@ -98,10 +116,10 @@ const Overview = () => {
       </FinanceColumnLayout>
       <FinanceColumnLayout grid="1fr 1fr">
         <FinanceCard dates title="Revenues by Vehicles">
-          <NumberOnlyList list={RevenueList} />
+          <NumberOnlyList list={vehicleRevenues} />
         </FinanceCard>
         <FinanceCard dates title="Top 5 Customers">
-          <NumberOnlyList list={RevenueList} />
+          <NumberOnlyList list={topFiveCustomers} />
         </FinanceCard>
       </FinanceColumnLayout>
     </div>

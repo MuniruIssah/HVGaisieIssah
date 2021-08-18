@@ -1,16 +1,17 @@
 .financeCard {
   box-shadow: 0px 1px 2px rgba(61, 67, 86, 0.2);
   border-radius: 6px;
-  padding: 20px;
-  min-width: 400px;
+  padding:0px 20px 5px;
   background-color: white;
   height: auto;
-  max-height: 350px;
+  max-height: 320px;
   overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin: 10px;
+  box-sizing: border-box;
+
 }
 .dateRange {
   display: flex;
@@ -23,7 +24,7 @@
 .financeCardWithSideGraph {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .financeCardWithSideGraph .leftColumn {
   display: flex;

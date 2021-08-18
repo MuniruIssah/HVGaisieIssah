@@ -7,9 +7,13 @@ import DashboardCardDateToday from "./components/FinanceCardDateToday/FinanceCar
 const FinanceCard = (props) => {
   return (
     <div className="financeCard">
-     {!props.sideGraph? <FinanceCardBasic {...props}>{props.children}</FinanceCardBasic>:
-     <FinanceCardWithSideGraph {...props}>{props.children}</FinanceCardWithSideGraph>
-     }
+      {!props.sideGraph ? (
+        <FinanceCardBasic {...props}>{props.children}</FinanceCardBasic>
+      ) : (
+        <FinanceCardWithSideGraph {...props}>
+          {props.children}
+        </FinanceCardWithSideGraph>
+      )}
     </div>
   );
 };
@@ -28,15 +32,18 @@ const FinanceCardWithSideGraph = ({
   return (
     <div className="financeCardWithSideGraph">
       <div className="leftColumn">
-      <div className="dashboardCardHeaderSection">
-        <DashboardCardHeader title={title} dates={dates} select={select} large={largeHeader} />
-        <DashboardCardDateToday dateToday={dateToday} />
+        <div className="dashboardCardHeaderSection">
+          <DashboardCardHeader
+            title={title}
+            dates={dates}
+            select={select}
+            large={largeHeader}
+          />
+          <DashboardCardDateToday dateToday={dateToday} />
+        </div>
+        {children}
       </div>
-      {children}
-      </div>
-      <div className="rightColumn"> 
-        {sideGraph}
-      </div>
+      <div className="rightColumn">{sideGraph}</div>
     </div>
   );
 };
@@ -52,7 +59,12 @@ const FinanceCardBasic = ({
   return (
     <>
       <div className="dashboardCardHeaderSection">
-        <DashboardCardHeader title={title} dates={dates} select={select} large={largeHeader} />
+        <DashboardCardHeader
+          title={title}
+          dates={dates}
+          select={select}
+          large={largeHeader}
+        />
         <DashboardCardDateToday dateToday={dateToday} />
       </div>
       {children}
