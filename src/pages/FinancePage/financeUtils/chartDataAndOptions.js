@@ -4,7 +4,7 @@ export const FinanceRevenueChartData = {
   datasets: [
     {
       radius: 1,
-      pointStyle: "line",
+      pointStyle: "circle",
       data: [5, 4, 6, 5, 10, 3],
       fill: true,
       backgroundColor: "#553FFB20",
@@ -23,7 +23,7 @@ export const ThreeColumnFinanceChartData = [
       datasets: [
         {
           radius: 1,
-          pointStyle: "line",
+          pointStyle: "circle",
           data: [5, 4, 6, 5, 10, 3, 2],
           fill: true,
           backgroundColor: "#38C98520",
@@ -40,7 +40,7 @@ export const ThreeColumnFinanceChartData = [
       datasets: [
         {
           radius: 1,
-          pointStyle: "line",
+          pointStyle: "circle",
           data: [5, 4, 6, 5, 10, 3, 3],
           fill: true,
           backgroundColor: "#FF412720",
@@ -57,7 +57,7 @@ export const ThreeColumnFinanceChartData = [
       datasets: [
         {
           radius: 1,
-          pointStyle: "line",
+          pointStyle: "circle",
           data: [5, 4, 6, 5, 10, 3, 6],
           fill: true,
           backgroundColor: "#553FFB20",
