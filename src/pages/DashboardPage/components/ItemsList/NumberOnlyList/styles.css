@@ -2,6 +2,7 @@
   counter-reset: list-counter;
   list-style: none;
   margin-top: 1rem;
+  margin-left: 0.7rem;
   position: relative;
   padding: 0px 20px;
 }
@@ -19,12 +20,11 @@
 
 .numberOnlyList li::before {
   counter-increment: list-counter;
-  position: absolute;
-  left: -10px;
   content: counter(list-counter);
-  width: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 11px;
   color: #3d4356;
   font-weight: 500;
   display: flex;

@@ -5,7 +5,8 @@ const data = {
   labels: ["1", "2", "3", "4", "5", "6"],
   datasets: [
     {
-      label: "# of Wahever",
+      radius: 1,
+      pointStyle: "circle",
       data: [5, 4, 6, 5, 10, 3],
       fill: true,
       backgroundColor: "#553FFB20",
@@ -17,6 +18,8 @@ const data2 = {
   labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat","Sun"],
   datasets: [
     {
+      radius: 1,
+      pointStyle: "circle",
       label: "Vehicle 1",
       data: [5, 4, 7, 6, 10, 7,2],
       fill: true,
@@ -24,6 +27,8 @@ const data2 = {
       borderColor: "#38C985",
     },
     {
+      radius: 1,
+      pointStyle: "circle",
       label: "Vehicle 2",
       data: [13, 6, 10, 15, 4, 7,1],
       fill: true,
@@ -31,6 +36,8 @@ const data2 = {
       borderColor: "#FF4127",
     },
     {
+      radius: 1,
+      pointStyle: "circle",
       label: "Vehicle 3",
       data: [5, 7, 9, 18, 1, 8,9],
       fill: true,
@@ -69,12 +76,9 @@ var chartOptions = {
   },
 };
 var chartOptions2 = {
-  legend: {
-    display: true,
-    position: "left",
-    labels: {
-      boxWidth: 80,
-      fontColor: "green",
+  plugins: {
+    legend: {
+      display: false,
     },
   },
   scales: {
@@ -89,10 +93,10 @@ var chartOptions2 = {
   },
 };
 
-const HVChartComponent = ({ multi }) => (
-  <div className="chartWrapper">
+const HVChartComponent = ({ multi,height }) => (
+  <div className="chartWrapper" style={{height:height}}>
     {!multi && (
-      <Line data={data} options={chartOptions} width={0.3} height={0.1} />
+      <Line  data={data} options={chartOptions} width={0.3} height={0.1} />
     )}
     {multi && (
       <Line data={data2} options={chartOptions2} width={0.3} height={0.1} />

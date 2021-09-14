@@ -5,10 +5,11 @@ import DashboardCardHeader from "./components/DashboardCardHeader/DashboardCardH
 import DashboardCardDateToday from "./components/DashboardCardDateToday/DashboardCardDateToday";
 
 const DashBoardCard = ({
-  flex,
   dateToday,
   title,
   dates,
+  scroll,
+  style,
   largeHeader,
   children,
 }) => {
@@ -18,7 +19,7 @@ const DashBoardCard = ({
         <DashboardCardHeader title={title} dates={dates} large={largeHeader} />
         <DashboardCardDateToday dateToday={dateToday} />
       </div>
-      {children}
+      {scroll ? <div style={{height:'100%',overflow:'scroll'}}>{children}</div> : <>{children}</>}
     </div>
   );
 };

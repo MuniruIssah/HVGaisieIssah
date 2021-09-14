@@ -2,20 +2,19 @@ import React from "react";
 import LabelAndValue from "../LabelAndValue/LabelAndValue";
 import "./styles.css";
 
-const LabelAndValueStrip = ({ list }) => {
-  let flexx = 1/list.length;
-    console.log(flexx)
+const LabelAndValueStrip = ({ list, style, bordered }) => {
   return (
-    <div className="labelAndValueStrip">
+    <div
+      className={`labelAndValueStrip ${bordered ? "bordered" : ""}`}
+      style={{ ...style }}
+    >
       {list.map((item) => (
-          <>
-        <LabelAndValue
-            flex={flexx}
-          label={item.label}
-          value={item.value}
-          green={item.green}
-          
-        />
+        <>
+          <LabelAndValue
+            label={item.label}
+            value={item.value}
+            green={item.green}
+          />
         </>
       ))}
     </div>

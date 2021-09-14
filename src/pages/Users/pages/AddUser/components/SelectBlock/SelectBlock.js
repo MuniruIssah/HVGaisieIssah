@@ -13,23 +13,23 @@ const dummySelectList = [
     name: "Hiatt Hardware ",
     address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
   },
-  {
-    name: "SamDane Hardware Shop ",
-    address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
-  },
-  {
-    name: "SamDane Hardware Shop ",
-    address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
-  },
-  {
-    name: "SamDane Hardware Shop ",
-    address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
-  },
 ];
-const SelectBlock = ({ label = "Store", list = dummySelectList, small }) => {
+const SelectBlock = ({
+  label = "Store",
+  list = dummySelectList,
+  value,
+  small,
+  onChange,
+}) => {
   const [showList, setShowList] = useState(false);
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(value);
   const handleShowList = () => setShowList(!showList);
+
+  const handleSelection = (item) => {
+    let storeLabel=label==="Store Name"?"store_name":"account_type"
+    onChange(storeLabel,item)
+    setSelected(item);
+  };
   return (
     <div className={`selectBlock`} style={{ width: small ? "285px" : "415px" }}>
       <div className="selectMain" onClick={handleShowList}>
@@ -49,7 +49,7 @@ const SelectBlock = ({ label = "Store", list = dummySelectList, small }) => {
               className={`selectItem ${
                 selected === item.name ? "activeSelectItem" : ""
               } `}
-              onClick={() => setSelected(item.name)}
+              onClick={() => handleSelection(item.name)}
             >
               <span>{item.name}</span>
               <span>{item.address}</span>

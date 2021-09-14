@@ -14,8 +14,8 @@ const data = {
   ],
 };
 
-const HVChartComponent = ({ data, options }) => (
-  <div className="chartWrapper">
+const HVChartComponent = ({ data, options ,height}) => (
+  <div className="chartWrapper" style={{height:height}}>
     <Line data={data} options={options} width={0.3} height={0.1} />
   </div>
 );

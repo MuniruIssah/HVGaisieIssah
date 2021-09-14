@@ -1,4 +1,21 @@
-.labelAndValueStrip{
-    display: flex;
-    justify-content:space-between;
+.labelAndValueStrip {
+  display: flex;
+  /* justify-content:flex-start !important; */
+}
+.labelAndValueStrip .labelAndValue:first-child {
+  margin-right: 0px;
+  position: relative;
+}
+.bordered .labelAndValue:first-child {
+  margin-right: 48px;
+}
+.bordered .labelAndValue:first-child::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 120%;
+  right: 0;
+  top: -10%;
+  z-index: 30;
+  background-color: #e3e7ed;
 }

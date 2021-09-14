@@ -1,59 +1,128 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import uniqid from "uniqid";
 import "./styles.css";
 import InputBlock from "../InputBlock/InputBlock";
 import SelectBlock from "../SelectBlock/SelectBlock";
-import pdf from "../../../../assets/pdf.png";
+
+import { Input } from "reactstrap";
+import ProfileImageSection from "./components/ProfileImageSection";
+import PersonalDetailsSection from "./components/PersonalDetailsSection";
+import { useHistory } from "react-router-dom";
+const dummySelectList = [
+  {
+    name: "SamDane Hardware Shop ",
+    address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
+  },
+  {
+    name: "The hardware City",
+    address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
+  },
+  {
+    name: "Hiatt Hardware ",
+    address: "Tetteh Ashong Street,Accra 00233  Ghana GA-202-4895",
+  },
+  {
+    name: "ERfg Rjes ",
+    address: "Tetteh Ashong SDe,Accra 00233  Ghana GA-202-4895",
+  },
+];
+const dummyAccountList = [
+  {
+    name: "Warehouse Manager ",
+  },
+  {
+    name: "Block Holder",
+  },
+  {
+    name: "Driver",
+  },
+  {
+    name: "Big Guy",
+  },
+];
 const NewUserForm = () => {
+  const history = useHistory();
+
+  //State
   const [stores, setStores] = useState([]);
+  const [file, setFile] = useState({});
+  const [personalDetails, setPersonalDetails] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+    phone_number: "",
+  });
+
+  const handlePersonalDetailsChange = (fieldname, e) => {
+    setPersonalDetails({ ...personalDetails, [fieldname]: e.target.value });
+  };
+
   const handleAddStore = () => {
-    const indexForStore = `Store${stores.length}`;
+    const store_id = uniqid("store");
     setStores([
       ...stores,
-      { index: indexForStore, store_name: "", account_type: "" },
+      { store_name: "Store", account_type: "Account Type", store_id },
     ]);
   };
+  useEffect(() => {
+    console.log(stores);
+  }, [stores]);
+  //Change Values for a store
+  const handleStoreChange = (index, e) => {
+    const values = [...stores];
+    console.log(e.target.name);
+    values[index][e.target.name] = e.target.value;
+    setStores(values);
+  };
+
+  //Handle Profile
+  const handleProfile = (newFile) => setFile(newFile);
+
+  //Delete Store
   const handleDeleteStore = (index) => {
-    const newStores = stores.filter((store) => store.index != index);
-    console.log(newStores)
-    setStores(newStores);
+    console.log(index);
+    const values = [...stores];
+    values.splice(index, 1);
+    setStores(values);
   };
   return (
     <form className="addNewUserForm">
-      <PersonalDetailsSection />
+      <PersonalDetailsSection
+        onChange={handlePersonalDetailsChange}
+        {...personalDetails}
+      />
       {stores.map((store, index) => (
-        <SelectRow onClick={handleDeleteStore} {...store} />
+        <StoreItemStrip
+          key={index}
+          store={store}
+          index={index}
+          handleDeleteStore={handleDeleteStore}
+          onChange={handleStoreChange}
+        />
       ))}
       <DynamicStoreButton onClick={handleAddStore} />
-
-      <ProfileImageSection />
+      <ProfileImageSection onChange={handleProfile} />
+      <div className="addUserButtons">
+        <button
+          type="button"
+          onClick={() => history.goBack()}
+          className="addUserCancel"
+        >
+          Cancel
+        </button>
+        <button type="submit" className="addUserSave">
+          Save
+        </button>
+      </div>
     </form>
   );
 };
 
 export default NewUserForm;
 
-const PersonalDetailsSection = () => {
-  return (
-    <div className="personalDetailsSection">
-      <InputBlock label="First Name" type="text" />
-      <InputBlock label="Last Name" type="text" />
-      <InputBlock label="Phone Number" type="text" />
-      <InputBlock label="Password" type="password" />
-    </div>
-  );
-};
+//Sub components for the new user form
 
-const SelectRow = ({ onClick, index, store_name, account_type }) => {
-  const removeStore = () => onClick(index);
-
-  return (
-    <div className="storeSection">
-      <SelectBlock label="Store Name" />
-      <SelectBlock label="Account Type" small />
-      <div className="deleteStore" onClick={removeStore}></div>
-    </div>
-  );
-};
 const DynamicStoreButton = ({ onClick }) => {
   const addStore = () => onClick();
   return (
@@ -64,27 +133,78 @@ const DynamicStoreButton = ({ onClick }) => {
     </div>
   );
 };
-const ProfileImageSection = () => {
+
+// Store Item Strip
+const StoreItemStrip = ({ store, index, handleDeleteStore, onChange }) => {
+  const [showStoreSelect, setShowStoreSelect] = useState(false);
+  const [showAccountSelect, setShowAccountSelect] = useState(false);
+  const toggleShowStoreSelect = () => setShowStoreSelect(!showStoreSelect);
+  const toggleShowAccountSelect = () => {
+    setShowAccountSelect(!showAccountSelect);
+  };
+
   return (
-    <div style={{ width: "150px" }}>
-      <div className="profileImageSection">
-        <div className="profileImageSectionIcon"></div>
-        <span>Profile Photo</span>
+    <div className="storeSection">
+      <div className="selectBlock" style={{ width: "415px" }}>
+        <div className="selectMain" onClick={toggleShowStoreSelect}>
+          {store.store_name}
+        </div>
+        <div
+          className={`selectList ${showStoreSelect ? "active" : ""}`}
+          onChange={(e) => onChange(index, e)}
+        >
+          {dummySelectList.map((item) => (
+            <div
+              className={`selectItem ${
+                store.store_name === item.name ? "activeSelectItem" : ""
+              }`}
+            >
+              <input
+                type="radio"
+                name={`store_name`}
+                id={`${item.name}${store.store_id}`}
+                value={item.name}
+              />
+              <label for={`${item.name}${store.store_id}`}>
+                <span>{item.name}</span>
+                <span>{item.address}</span>
+              </label>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="profileImageSectionActions">
-        <button>
-          <div
-            className="eyecons"
-            style={{ backgroundImage: `url(${pdf})`, width: 20, height: 18 }}
-          ></div>
-        </button>
-        <button>
-          <div
-            className="eyecons"
-            style={{ backgroundImage: `url(${pdf})`, width: 20, height: 18 }}
-          ></div>
-        </button>
+      <div className={`selectBlock`} style={{ width: "285px" }}>
+        <div className="selectMain" onClick={toggleShowAccountSelect}>
+          {store.account_type}
+        </div>
+        <div
+          className={`selectList ${showAccountSelect ? "active" : ""}`}
+          onChange={(e) => onChange(index, e)}
+        >
+          {dummyAccountList.map((item) => (
+            <div
+              className={`selectItem ${
+                store.account_type === item.name ? "activeSelectItem" : ""
+              }`}
+            >
+              <input
+                type="radio"
+                name={`account_type`}
+                id={`${item.name}${store.store_id}`}
+                value={item.name}
+              />
+              <label for={`${item.name}${store.store_id}`}>
+                <span>{item.name}</span>
+                <span>{item.address}</span>
+              </label>
+            </div>
+          ))}
+        </div>
       </div>
+      <div
+        className="deleteStore"
+        onClick={() => handleDeleteStore(index)}
+      ></div>
     </div>
   );
 };

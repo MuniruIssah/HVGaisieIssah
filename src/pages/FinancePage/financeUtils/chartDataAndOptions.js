@@ -3,7 +3,8 @@ export const FinanceRevenueChartData = {
   labels: ["1", "2", "3", "4", "5", "6"],
   datasets: [
     {
-      label: "# of Wahever",
+      radius: 1,
+      pointStyle: "circle",
       data: [5, 4, 6, 5, 10, 3],
       fill: true,
       backgroundColor: "#553FFB20",
@@ -21,6 +22,8 @@ export const ThreeColumnFinanceChartData = [
       labels: ["Mon", "", "", "", "", "", "Sun"],
       datasets: [
         {
+          radius: 1,
+          pointStyle: "circle",
           data: [5, 4, 6, 5, 10, 3, 2],
           fill: true,
           backgroundColor: "#38C98520",
@@ -36,6 +39,8 @@ export const ThreeColumnFinanceChartData = [
       labels: ["Mon", "", "", "", "", "", "Sun"],
       datasets: [
         {
+          radius: 1,
+          pointStyle: "circle",
           data: [5, 4, 6, 5, 10, 3, 3],
           fill: true,
           backgroundColor: "#FF412720",
@@ -51,6 +56,8 @@ export const ThreeColumnFinanceChartData = [
       labels: ["Mon", "", "", "", "", "", "Sun"],
       datasets: [
         {
+          radius: 1,
+          pointStyle: "circle",
           data: [5, 4, 6, 5, 10, 3, 6],
           fill: true,
           backgroundColor: "#553FFB20",
@@ -60,34 +67,6 @@ export const ThreeColumnFinanceChartData = [
     },
   },
 ];
-
-// const MultiLineChartData = {
-//     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-//     datasets: [
-//       {
-//         label: "Vehicle 1",
-//         data: [5, 4, 7, 6, 10, 7, 2],
-//         fill: true,
-//         backgroundColor: "#38C98520",
-//         borderColor: "#38C985",
-//       },
-//       {
-//         label: "Vehicle 2",
-//         data: [13, 6, 10, 15, 4, 7, 1],
-//         fill: true,
-//         backgroundColor: "#FF412720",
-//         borderColor: "#FF4127",
-//       },
-//       {
-//         label: "Vehicle 3",
-//         data: [5, 7, 9, 18, 1, 8, 9],
-//         fill: true,
-//         backgroundColor: "#553FFB20",
-//         borderColor: "#553FFB",
-//       },
-//     ],
-//   };
-
 //All the chart options
 export const optionTypes = {
   options1: {
@@ -132,11 +111,11 @@ export const optionTypes = {
       legend: {
         display: false,
       },
-      title: {
-        display: true,
-        text: "Average Rainfall per month",
-        fontSize: 20,
-        position: "top",
+    },
+    elements: {
+      point: {
+        radius: 20,
+        pointStyle: "rect",
       },
     },
     scales: {
