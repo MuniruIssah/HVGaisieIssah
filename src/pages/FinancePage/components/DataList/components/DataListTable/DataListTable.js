@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import DataListModal from "../../../DataListInvoiceModal/DataListInvoiceModal";
 import Invoice from "../../../Invoice/Invoice";
+import eyeIcon from "../../../../assets/eye.svg"
+
+import { faCheck, faLessThanEqual } from "@fortawesome/free-solid-svg-icons";
 const dummyList = [
   {
     INVOICE_ID: "wwwww",
@@ -55,10 +58,30 @@ export default DataListTable;
 
 const FinanceDataListTableHeader = ({ headerList }) => {
   console.log(headerList);
+  const [checked, setChecked] = useState(false);
   return (
     <tr className="tableHeader">
       <th>
-        <div className="tableCheck"></div>
+        {!checked ? (
+          <div
+            className="tableCheck"
+            onClick={() => {
+              setChecked(true);
+            }}
+          ></div>
+        ) : (
+          <div
+            className="tableChecked"
+            onClick={() => {
+              setChecked(false);
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faCheck}
+              style={{ fontSize: 11, color: "white" }}
+            />
+          </div>
+        )}
       </th>
       {headerList.map((item) => (
         <th key={item}>{item}</th>
@@ -80,11 +103,32 @@ const FinanceDataListTableMain = ({ list }) => {
 
 const FinanceDataListTableItem = ({ item }) => {
   const [visible, setVisible] = useState(false);
+  const [checked, setChecked] = useState(false);
+
   return (
     <>
-      <tr className="dataListTableItem">
+      <tr className="dataListTableItem" onClick={() => setChecked(!checked)}>
         <td>
-          <div className="tableCheck"></div>
+          {!checked ? (
+            <div
+              className="tableCheck"
+              onClick={() => {
+                setChecked(true);
+              }}
+            ></div>
+          ) : (
+            <div
+              className="tableChecked"
+              onClick={() => {
+                setChecked(false);
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faCheck}
+                style={{ fontSize: 11, color: "white" }}
+              />
+            </div>
+          )}
         </td>
         <td>{item.INVOICE_ID}</td>
         <td className="customer">
@@ -103,10 +147,10 @@ const FinanceDataListTableItem = ({ item }) => {
         <td style={{ fontWeight: "700" }}>{item.AMOUNT}</td>
         <td>
           <button
+          style={{backgroundImage:`url(${eyeIcon})`,backgroundSize:15}}
             onClick={() => setVisible(true)}
             className="tableActionButton"
           >
-            <FontAwesomeIcon icon={faEye} />
           </button>
         </td>
       </tr>

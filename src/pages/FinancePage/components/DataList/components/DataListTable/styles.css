@@ -29,12 +29,22 @@
 .tableCheck {
   width: 17px;
   height: 17px;
-  background-color: white;
   border: 1px solid #e9ecef;
+  background-color: white;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.02),
     0px 1px 3px rgba(50, 50, 93, 0.15);
   border-radius: 3px;
   cursor: pointer;
+}
+
+.tableChecked {
+  width: 17px;
+  height: 17px;
+  background: #38c985;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Styling The table list item (row) */

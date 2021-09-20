@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./styles.css";
+import { Label, Input } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faEye, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
+import deleteIcon from "../../../../assets/delete.svg"
+import editIcon from "../../../../assets/edit.svg"
+import eyeIcon from "../../../../assets/eye.svg"
+
 import DataListModal from "../../../DataListInvoiceModal/DataListInvoiceModal";
 import Invoice from "../../../Invoice/Invoice";
-import { faPen, faPenAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faPen, faPenAlt } from "@fortawesome/free-solid-svg-icons";
 import { useHistory, useRouteMatch } from "react-router-dom";
 const dummyList = [
   {
@@ -27,7 +31,6 @@ const dummyList = [
   },
 ];
 const DataListTable = ({ list = dummyList }) => {
-
   return (
     <table className="dataListTable">
       <FinanceDataListTableHeader
@@ -42,10 +45,30 @@ export default DataListTable;
 
 const FinanceDataListTableHeader = ({ headerList }) => {
   console.log(headerList);
+  const [checked, setChecked] = useState(false);
   return (
     <tr className="tableHeader">
       <th>
-        <div className="tableCheck"></div>
+        {!checked ? (
+          <div
+            className="tableCheck"
+            onClick={() => {
+              setChecked(true);
+            }}
+          ></div>
+        ) : (
+          <div
+            className="tableChecked"
+            onClick={() => {
+              setChecked(false);
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faCheck}
+              style={{ fontSize: 11, color: "white" }}
+            />
+          </div>
+        )}
       </th>
       {headerList.map((item) => (
         <th key={item}>{item}</th>
@@ -65,15 +88,35 @@ const FinanceDataListTableMain = ({ list }) => {
   );
 };
 
-const FinanceDataListTableItem = ({ item }) => {
+const FinanceDataListTableItem = ({ item ,checkAll}) => {
   const [visible, setVisible] = useState(false);
   const { path } = useRouteMatch();
-  const history=useHistory()
+  const history = useHistory();
+  const [checked, setChecked] = useState(false);
   return (
     <>
-      <tr className="dataListTableItem">
+      <tr className="dataListTableItem" onClick={() => setChecked(!checked)}>
         <td>
-          <div className="tableCheck"></div>
+          {!checked ? (
+            <div
+              className="tableCheck"
+              onClick={() => {
+                setChecked(true);
+              }}
+            ></div>
+          ) : (
+            <div
+              className="tableChecked"
+              onClick={() => {
+                setChecked(false);
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faCheck}
+                style={{ fontSize: 11, color: "white" }}
+              />
+            </div>
+          )}
         </td>
         <td>
           <div className="username">
@@ -101,22 +144,18 @@ const FinanceDataListTableItem = ({ item }) => {
           </div>
         </td>
         <td>
-          <button
-            className="tableActionButton"
-          >
-            <FontAwesomeIcon icon={faTrashAlt} />
+          <button className="tableActionButton" style={{backgroundImage:`url(${deleteIcon})`,backgroundSize:12}}>
+            
+          </button>
+          <button className="tableActionButton" style={{backgroundImage:`url(${editIcon})`,backgroundSize:15}}>
+          
           </button>
           <button
-
-            className="tableActionButton"
-          >
-            <FontAwesomeIcon icon={faPen} />
-          </button>
-          <button
+          style={{backgroundImage:`url(${eyeIcon})`,backgroundSize:15}}
             onClick={() => history.push(`${path}/${item.NAME}`)}
             className="tableActionButton"
           >
-            <FontAwesomeIcon icon={faEye} />
+           
           </button>
         </td>
       </tr>
