@@ -4,7 +4,7 @@ import React from "react";
 import "./styles.css";
 const SearchBar = () => {
   return (
-    <div className="searchBar">
+    <div className="userSearchBar">
       <FontAwesomeIcon icon={faSearch} className="sBIcon" fontWeight="100" />
       <input type="text" placeholder="Search User" />
     </div>

@@ -1,14 +1,13 @@
 import React from "react";
 import "./styles.css";
-import pdf from "../../../../../../assets/pdf.png";
-import print from "../../../../../../assets/print.png";
+import pdf from "../../../../../../assets/pdf.svg";
+import print from "../../../../../../assets/print.svg";
 
 const ActionsStrip = () => {
   return (
     <div className="actionsStrip">
       <IconButton icon={pdf} />
       <IconButton icon={print} />
-
       <UserDeleteButton />
       <UserUpdateButton />
     </div>
@@ -17,7 +16,7 @@ const ActionsStrip = () => {
 
 export default ActionsStrip;
 
-const IconButton = ({ icon }) => {
+export const IconButton = ({ icon }) => {
   return (
     <button className="iconButton">
       <div className="icon" style={{ backgroundImage: `url(${icon})` }}></div>

@@ -1,7 +1,11 @@
 import React from "react";
+import { IconButton } from "../../../../pages/UserProfile/components/NameAndActionsStrip/components/ActionsStrip/ActionsStrip";
 import ExportButton from "./components/ExportButton/ExportButton";
 import FilterButton from "./components/FilterButton/FilterButton";
 import SearchBar from "./components/SearchBar/SearchBar";
+import pdf from "../../../../assets/pdf.svg";
+import print from "../../../../assets/print.svg";
+
 import "./styles.css";
 const dummyList = [
   {
@@ -34,7 +38,10 @@ const DataListHeaderSecondSection = () => {
   return (
     <div style={{ display: "flex", alignItems: "center", marginBottom: 11 }}>
       <SearchBar />
-      <ExportButton />
+      <div>
+        <IconButton icon={pdf} />
+        <IconButton icon={print} />
+      </div>
     </div>
   );
 };

@@ -147,7 +147,7 @@ const FinanceDataListTableItem = ({ item }) => {
         <td style={{ fontWeight: "700" }}>{item.AMOUNT}</td>
         <td>
           <button
-          style={{backgroundImage:`url(${eyeIcon})`,backgroundSize:15}}
+          style={{backgroundImage:`url(${eyeIcon})`,backgroundSize:15}} 
             onClick={() => setVisible(true)}
             className="tableActionButton"
           >
