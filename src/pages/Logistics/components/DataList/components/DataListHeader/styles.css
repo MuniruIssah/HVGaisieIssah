@@ -1,0 +1,7 @@
+.dataListHeader {
+  display: flex;
+  border-bottom: 2px solid #e3e7ed;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: flex-end;
+}

@@ -2,7 +2,16 @@
   display: flex;
   margin-left: 0px !important;
 }
-
+.react-datepicker-wrapper {
+  width: 300px !important;
+}
+/* 
+.testPopperClassname {
+  z-index: 10000000000000 !important;
+} */
+.react-datepicker-popper {
+  z-index: 2147483647;
+}
 .dateToggleButton {
   border-radius: 6px;
   border: none;
@@ -24,7 +33,7 @@
   color: #553ffb;
 }
 
-.dateToggleButton:hover{
+.dateToggleButton:hover {
   background: #553ffb10;
   color: #553ffb;
 }

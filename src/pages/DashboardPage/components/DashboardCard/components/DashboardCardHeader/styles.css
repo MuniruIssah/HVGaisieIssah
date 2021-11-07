@@ -1,11 +1,13 @@
 .dashboardCardHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-between !important;
 }
 .dashboardCardHeaderTitle {
   color: #8892a2;
   text-align: left;
+  z-index: 2;
   font-size: 16px;
 }
 .bigHeader{

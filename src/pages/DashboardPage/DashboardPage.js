@@ -23,7 +23,7 @@ const DashboardPage = () => {
     <div className="dashboardPage">
       <h1>Dashboard</h1>
       <TwoColumnLayout grid="1fr 1fr">
-        <DashBoardCard dates dateToday={true}>
+        <DashBoardCard dates dateToday={true} zeeIndex>
           <LabelAndValueStrip list={labelandValue} />
         </DashBoardCard>
         <DashBoardCard>

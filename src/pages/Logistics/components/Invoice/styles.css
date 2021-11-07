@@ -1,0 +1,241 @@
+/* Invoice Header Styles */
+
+.invoiceHeader {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.invoiceHeader .invoiceIDDiv {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.invoiceHeader .invoiceIDDiv span:first-child {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #8898aa;
+}
+.invoiceHeader .invoiceIDDiv span:last-child {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 0.8;
+  color: #1c345d;
+}
+
+.invoiceHeaderButtons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.invoiceHeaderButtons button {
+  color: #8892a2;
+  height: 32px;
+  padding: 0px 15px;
+  background-color: white;
+  border: 1px solid #e3e7ed;
+  box-sizing: border-box;
+}
+.invoiceHeaderButtons button:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.invoiceHeaderButtons button:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.invoiceHeader .eyecons {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Invoice Issue Strip */
+.invoiceIssueStrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0px;
+}
+.invoiceIssueStrip .issueInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.invoiceIssueStrip .issueInfo span:first-child {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #8898aa;
+}
+
+.invoiceIssueStrip .issueInfo span:last-child {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 172.4%;
+  color: #1c345d;
+}
+
+.invoiceIssueStrip .appLogoSection {
+  background-image: url(../../../../assets/logo.svg);
+  height: 50px;
+  width: 90px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Address Strip Styles */
+.invoiceAddressStrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.invoiceAddressStrip div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+.invoiceAddressStrip div:first-child span:first-child {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #8898aa;
+}
+.invoiceAddressStrip div:first-child span:nth-child(2) {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 172.4%;
+  color: #1c345d;
+}
+.invoiceAddressStrip div:first-child span:last-child {
+  font-style: normal;
+  font-weight: 450;
+  width: 200px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #8892a2;
+}
+.invoiceAddressStrip div:last-child span:first-child {
+  font-style: normal;
+  font-weight: 450;
+  display: block;
+  text-align: right;
+  width: 190px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #8892a2;
+}
+
+/* Item List */
+.invoiceItemListTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  margin-bottom: 15px;
+  counter-reset: invoice;
+}
+.invoiceItemListTableHeadItem:first-child {
+  padding-left: 5%;
+}
+.invoiceItemListTableHeadItem {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 12px;
+  color: #8892a2;
+  text-transform: capitalize;
+}
+.invoiceItemListTableContentItem {
+  background: rgb(244, 245, 247, 0.5);
+  font-size: 13px;
+  line-height: 100.4%;
+  color: #040a1d;
+  border-radius: 6px;
+  width: 100%;
+  height: 35px;
+}
+.invoiceItemListTableContentItem td:first-child {
+}
+.invoiceItemListTableContentItem td:first-child::before {
+  counter-increment: invoice;
+  content: "" counter(invoice);
+  width: 20px;
+  font-size: 12px;
+  padding: 3px 8px;
+  background: #e3e7ed;
+  margin-right: 2ch;
+  margin-left: 1ch;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.invoiceLabelAndValueItem {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  margin-bottom: 10px;
+}
+.invoiceLabelAndValueItem span:first-child {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height, or 100% */
+  text-align: right;
+
+  /* HopeVoice/black/gray2 */
+  color: #8892a2;
+}
+.invoiceLabelAndValueItem span:last-child {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 172.4%;
+  margin-left: 8%;
+  text-align: right;
+  color: #040a1d;
+}
+
+.invoiceStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.invoiceStatus .orderBlock {
+  width: 220px;
+  background: rgb(56, 201, 133, 0.1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px;
+  margin-bottom: 10px;
+}
+.invoiceStatus .orderBlock span:first-child {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+  color: #38c985;
+}
+.invoiceStatus .orderBlock span:last-child {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: right;
+  color: #38c985;
+}
+
+.invoiceStatus .statusBlock {
+  font-size: 12px;
+  line-height: 15px;
+  color: #38c985;
+  background: rgba(56, 201, 133, 0.1);
+  border-radius: 6px;
+  padding: 1px 9px;
+  margin-right: 4%;
+}

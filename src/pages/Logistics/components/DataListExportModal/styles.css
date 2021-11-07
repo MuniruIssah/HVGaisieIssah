@@ -1,0 +1,82 @@
+.dataListExportModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(4, 10, 29, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dataListExportModal .dataListExportModalContent {
+  height: auto;
+  min-height: 100px;
+  background: #f4f5f7;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 32px rgba(136, 152, 170, 0.15);
+  border-radius: 4px;
+  width: min(90vw, 600px);
+}
+.dataListExportModalContentHeader {
+  height: 55px;
+  border-bottom: 1px solid #e3e7ed;
+  font-size: 20px;
+  font-weight: 900;
+  color: #040a1d;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.dataListExportModal .dataListExportModalContent .closeIcon {
+  background-size: contain;
+  position: absolute;
+  right: 5%;
+}
+
+.dataListExportModalContentMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20px 50px;
+}
+
+.dataListExportModalContentRadioItem {
+  color: #3d4356;
+  font-size: 14px;
+  display: flex;
+}
+
+.dataListExportModalContentRadioItem span {
+  margin-left:9px ;
+}
+
+
+.dataListExportModalContentFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.dataListExportModalContentFooter button:first-child {
+  background: #ffffff;
+  border: 1px solid #8892a2;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px 30px;
+  margin: 0px 13px;
+}
+.dataListExportModalContentFooter button:last-child {
+  background: #553ffb;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  padding: 10px 30px;
+  margin: 0px 13px;
+  /* display: flex;
+  justify-content: flex-end; */
+}

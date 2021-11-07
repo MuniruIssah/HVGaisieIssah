@@ -45,8 +45,8 @@ const DateToggleButtons = () => {
 
 export default DateToggleButtons;
 
-const DateToggleButton = ({ title, active }) => {
-  const dummyFunctionForButton = () => alert(title);
+export const DateToggleButton = ({ title, active ,onClick}) => {
+  const dummyFunctionForButton = () => onClick();
   return (
     <>
       <button
