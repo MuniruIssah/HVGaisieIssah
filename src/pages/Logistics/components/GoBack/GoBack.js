@@ -4,12 +4,12 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import back from '../../../../assets/back.svg'
 import "./styles.css"
-const GoBack = () => {
+const GoBack = ({label,style}) => {
   const history=useHistory()
   return (
-    <button onClick={()=>history.goBack()} className="goBack">
+    <button onClick={()=>history.goBack()} className="goBack" style={{...style}}>
       <div className="backIcon" style={{backgroundImage:`url(${back})`}}></div>
-      <span>Users</span>
+      <span>{label?label:'Users'}</span>
     </button>
   );
 };

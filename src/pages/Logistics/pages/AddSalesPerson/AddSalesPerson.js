@@ -5,7 +5,7 @@ import NewUserForm from "./components/NewUserForm/NewUserForm";
 const AddSalesPerson = () => {
   return (
     <div className="dashboardPage">
-      <GoBack />
+      <GoBack label="Sales Person" style={{ width: "140px" }} />
       <h1
         style={{
           borderBottom: "2px solid #E3E7ED",
@@ -14,7 +14,7 @@ const AddSalesPerson = () => {
       >
         Add New Sales Person
       </h1>
-      <NewUserForm/>
+      <NewUserForm />
     </div>
   );
 };
