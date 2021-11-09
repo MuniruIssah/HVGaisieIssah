@@ -13,7 +13,7 @@ import {
 import "./styles.css";
 
 const LogisticsPage = () => {
-  const [driversView, setDriversView] = useState(true);
+  const [driversView, setDriversView] = useState(false);
   const vehiclesActions = [
     {
       icon: deleteIcon,

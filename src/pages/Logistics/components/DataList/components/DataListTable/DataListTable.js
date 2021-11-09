@@ -181,23 +181,6 @@ const FinanceDataListTableItem = ({
           </div>
         </td>
         <td>
-          {/* <button
-            className="tableActionButton"
-            style={{
-              backgroundImage: `url(${deleteIcon})`,
-              backgroundSize: 12,
-            }}
-          ></button>
-          <button
-            className="tableActionButton"
-            style={{ backgroundImage: `url(${editIcon})`, backgroundSize: 15 }}
-          ></button>
-          <button
-            style={{ backgroundImage: `url(${eyeIcon})`, backgroundSize: 15 }}
-            onClick={() => history.push(`${path}/${item.NAME}`)}
-            className="tableActionButton"
-          ></button> */}
-
           {actions.map((item, index) => (
             <button
               key={index}
@@ -213,3 +196,20 @@ const FinanceDataListTableItem = ({
     </>
   );
 };
+
+/* <button
+            className="tableActionButton"
+            style={{
+              backgroundImage: `url(${deleteIcon})`,
+              backgroundSize: 12,
+            }}
+          ></button>
+          <button
+            className="tableActionButton"
+            style={{ backgroundImage: `url(${editIcon})`, backgroundSize: 15 }}
+          ></button>
+          <button
+            style={{ backgroundImage: `url(${eyeIcon})`, backgroundSize: 15 }}
+            onClick={() => history.push(`${path}/${item.NAME}`)}
+            className="tableActionButton"
+          ></button> */
