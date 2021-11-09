@@ -20,6 +20,7 @@ const InputBlock = ({
     <div className="inputBlock">
       <label className={`inputBlockLabel ${labelClass}`}>{label}</label>
       <input
+      required
         type={`${type}`}
         onFocus={showLabel}
         onBlur={hideLabel}

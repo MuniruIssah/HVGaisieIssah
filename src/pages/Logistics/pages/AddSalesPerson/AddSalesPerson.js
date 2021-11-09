@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import GoBack from "../../components/GoBack/GoBack";
-import NewUserForm from "./components/NewUserForm/NewUserForm";
+import NewSalesPersonForm from "./components/NewUserForm/NewSalesPersonForm";
 const AddSalesPerson = () => {
   return (
     <div className="dashboardPage">
@@ -14,7 +14,7 @@ const AddSalesPerson = () => {
       >
         Add New Sales Person
       </h1>
-      <NewUserForm />
+      <NewSalesPersonForm />
     </div>
   );
 };
