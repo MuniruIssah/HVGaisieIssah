@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./styles.css";
 import { Label, Input } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import deleteIcon from "../../../../assets/delete.svg"
-import editIcon from "../../../../assets/edit.svg"
-import eyeIcon from "../../../../assets/eye.svg"
+import deleteIcon from "../../../../assets/delete.svg";
+import editIcon from "../../../../assets/edit.svg";
+import eyeIcon from "../../../../assets/eye.svg";
 
 import DataListModal from "../../../DataListInvoiceModal/DataListInvoiceModal";
 import Invoice from "../../../Invoice/Invoice";
@@ -30,73 +30,27 @@ const dummyList = [
     STATUS: "Active",
   },
 ];
-const DataListTable = ({ list = dummyList }) => {
+const DataListTable = ({ list = dummyList, allowSelect }) => {
   return (
-    <table className="dataListTable">
+    <table className="ldataListTable">
       <FinanceDataListTableHeader
+        allowSelection={allowSelect}
         headerList={["NAME", "PHONE NUMBER", "ACCOUNT TYPE", "STATUS"]}
       />
-      <FinanceDataListTableMain list={list} />
+      <FinanceDataListTableMain list={list} allowSelection={allowSelect} />
     </table>
   );
 };
 
 export default DataListTable;
 
-const FinanceDataListTableHeader = ({ headerList }) => {
+const FinanceDataListTableHeader = ({ headerList, allowSelection }) => {
   console.log(headerList);
   const [checked, setChecked] = useState(false);
   return (
     <tr className="tableHeader">
-      <th>
-        {!checked ? (
-          <div
-            className="tableCheck"
-            onClick={() => {
-              setChecked(true);
-            }}
-          ></div>
-        ) : (
-          <div
-            className="tableChecked"
-            onClick={() => {
-              setChecked(false);
-            }}
-          >
-            <FontAwesomeIcon
-              icon={faCheck}
-              style={{ fontSize: 11, color: "white" }}
-            />
-          </div>
-        )}
-      </th>
-      {headerList.map((item) => (
-        <th key={item}>{item}</th>
-      ))}
-      <th>Action</th>
-    </tr>
-  );
-};
-
-const FinanceDataListTableMain = ({ list }) => {
-  return (
-    <tbody className="tableBody">
-      {list.map((item) => (
-        <FinanceDataListTableItem item={item} />
-      ))}
-    </tbody>
-  );
-};
-
-const FinanceDataListTableItem = ({ item ,checkAll}) => {
-  const [visible, setVisible] = useState(false);
-  const { path } = useRouteMatch();
-  const history = useHistory();
-  const [checked, setChecked] = useState(false);
-  return (
-    <>
-      <tr className="dataListTableItem" onClick={() => setChecked(!checked)}>
-        <td>
+      {allowSelection && (
+        <th>
           {!checked ? (
             <div
               className="tableCheck"
@@ -117,7 +71,63 @@ const FinanceDataListTableItem = ({ item ,checkAll}) => {
               />
             </div>
           )}
-        </td>
+        </th>
+      )}
+      {headerList.map((item) => (
+        <th key={item}>{item}</th>
+      ))}
+      <th>Action</th>
+    </tr>
+  );
+};
+
+const FinanceDataListTableMain = ({ list, allowSelection }) => {
+  return (
+    <tbody className="tableBody">
+      {list.map((item) => (
+        <FinanceDataListTableItem item={item} allowSelection={allowSelection} />
+      ))}
+    </tbody>
+  );
+};
+
+const FinanceDataListTableItem = ({ item, allowSelection }) => {
+  const [visible, setVisible] = useState(false);
+  const { path } = useRouteMatch();
+  const history = useHistory();
+  const [checked, setChecked] = useState(false);
+  return (
+    <>
+      <tr className="ldataListTableItem" onClick={() => setChecked(!checked)}>
+        {allowSelection && (
+          <td
+            // ref={(element) => {
+            // if (allowSelection){
+            //     element.style.setProperty("display", "block", "important");}
+            // }}
+          >
+            {!checked ? (
+              <div
+                className="tableCheck"
+                onClick={() => {
+                  setChecked(true);
+                }}
+              ></div>
+            ) : (
+              <div
+                className="tableChecked"
+                onClick={() => {
+                  setChecked(false);
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={faCheck}
+                  style={{ fontSize: 11, color: "white" }}
+                />
+              </div>
+            )}
+          </td>
+        )}
         <td>
           <div className="username">
             <div
@@ -144,19 +154,22 @@ const FinanceDataListTableItem = ({ item ,checkAll}) => {
           </div>
         </td>
         <td>
-          <button className="tableActionButton" style={{backgroundImage:`url(${deleteIcon})`,backgroundSize:12}}>
-            
-          </button>
-          <button className="tableActionButton" style={{backgroundImage:`url(${editIcon})`,backgroundSize:15}}>
-          
-          </button>
           <button
-          style={{backgroundImage:`url(${eyeIcon})`,backgroundSize:15}}
+            className="tableActionButton"
+            style={{
+              backgroundImage: `url(${deleteIcon})`,
+              backgroundSize: 12,
+            }}
+          ></button>
+          <button
+            className="tableActionButton"
+            style={{ backgroundImage: `url(${editIcon})`, backgroundSize: 15 }}
+          ></button>
+          <button
+            style={{ backgroundImage: `url(${eyeIcon})`, backgroundSize: 15 }}
             onClick={() => history.push(`${path}/${item.NAME}`)}
             className="tableActionButton"
-          >
-           
-          </button>
+          ></button>
         </td>
       </tr>
     </>

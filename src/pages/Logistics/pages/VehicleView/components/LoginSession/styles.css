@@ -1,0 +1,51 @@
+.loginSession {
+  margin-top: 20px;
+  text-align: left;
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(61, 67, 86, 0.2);
+  border-radius: 6px;
+  padding: 50px;
+  width: 100%;
+}
+.loginSession h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #040a1d;
+}
+
+.loginSession span {
+  font-size: 14px;
+  line-height: 18px;
+  color: #8892a2;
+}
+.loginSessionTable {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #e3e7ed;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  
+}
+.loginSessionTable tr:first-child {
+  background-color: #f4f5f7;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.9px;
+  color: #8892a2;
+
+}
+.loginSessionTable tr:first-child th {
+  padding: 14px 31px;
+}
+.loginSession tr {
+  font-weight: 400;
+  font-size: 14px;
+  color: #3d4356;
+  border: 1px solid #E3E7ED;
+}
+.loginSession tr td {
+  padding: 14px 31px;
+}

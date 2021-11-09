@@ -15,7 +15,7 @@ const DashBoardCard = ({
   children,
 }) => {
   return (
-    <div className="dashboardCard">
+    <div className="dashboardCard" style={{...style}}>
       <div className={`dashboardCardHeaderSection`} style={{zIndex:zeeIndex?10:5}}>
         <DashboardCardHeader title={title} dates={dates} large={largeHeader} />
         <DashboardCardDateToday dateToday={dateToday} />

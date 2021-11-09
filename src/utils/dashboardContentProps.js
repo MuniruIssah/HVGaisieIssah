@@ -34,6 +34,7 @@ import SettingsInactive from "../assets/HV/Settings/iccon/inactive.svg";
 import DashboardPage from "../pages/DashboardPage/DashboardPage";
 import FinancePage from "../pages/FinancePage/FinancePage";
 import Users from '../pages/Users/Users'
+import Logistics from "../pages/Logistics/Logistics";
 export const SideBarContent = [
   {
     label: "Dashboard",
@@ -141,7 +142,7 @@ export const mainContent = [
   },
   {
     path: "/dashboard/logistics",
-    component: "This is logistics",
+    component: Logistics,
   },
   {
     path: "/dashboard/products",

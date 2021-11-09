@@ -1,6 +1,7 @@
 .userSearchBar {
   width: 300px;
-  border: 1px solid #e3e7ed;
+  background: #FFFFFF;
+  border: 1px solid #E3E7ED;
   box-sizing: border-box;
   border-radius: 6px;
   height: 30px;

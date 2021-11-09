@@ -8,17 +8,19 @@ import DataListHeightSelect from "./components/DataListHeightSelect/DataListHeig
 import DataListPagination from "./components/DataListPagination/DataListPagination";
 import DataListTable from "./components/DataListTable/DataListTable";
 import "./styles.css";
-const DataList = () => {
+const DataList = ({children,allowSelect,filters,style}) => {
   const { path } = useRouteMatch();
   console.log(path);
   return (
-    <div>
-      <DataListHeader />
+    <div style={{...style}}>
+      <DataListHeader filters={filters} />
       <DataListExtras>
         {/* <DateToggleButtons white /> */}
-        <AddUserButton path={`${path}/add`} />
+        {/* <AddUserButton path={`${path}/add`} />
+         */}
+         {children}
       </DataListExtras>
-      <DataListTable />
+      <DataListTable allowSelect={allowSelect} />
       <DataListFooter>
         <DataListPagination />
         <DataListHeightSelect />
@@ -36,7 +38,7 @@ const DataListFooter = ({ children }) => {
   return <div className="dataListFooter">{children}</div>;
 };
 
-const AddUserButton = ({ path }) => {
+export const AddDriverButton = ({ path }) => {
   const history = useHistory();
   return (
     <button onClick={() => history.push(path)} className="addNewUser">

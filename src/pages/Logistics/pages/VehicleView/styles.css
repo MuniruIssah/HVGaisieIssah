@@ -1,0 +1,74 @@
+.salesPersonSection {
+  text-align: left;
+}
+.salesPersonSection .spsTitle {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #8892a2;
+}
+
+.noSalesPerson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.noSalesPerson span:first-child {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #3d4356;
+}
+.salesPersonAvailable {
+  margin-top: 0.45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.salesPersonDetails {
+  display: flex;
+  align-items: center;
+}
+.salesPersonDetails .salesProfileImage {
+  width: 42px;
+  height: 42px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+.salesPersonDetails .salesProfileMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin-left: 20px;
+}
+.salesPersonDetails .salesProfileMain span:first-child {
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #3d4356;
+}
+.salesPersonDetails .salesProfileMain span:last-child {
+  font-size: 12px;
+  line-height: 15px;
+  color: #8892A2;
+}
+.tableActionButton {
+  border: 1px solid #e3e7ed;
+  height: 32px;
+  width: 36px;
+  background-color: white;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.tableActionButton:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.tableActionButton:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}

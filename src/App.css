@@ -40,7 +40,13 @@
 .formRow {
   width: 100vw;
 }
-
+/* button {
+  border: none;
+  background: none;
+} */
+a {
+  text-decoration: none !important;
+}
 .centeredPage {
   height: 100vh;
   display: flex;
