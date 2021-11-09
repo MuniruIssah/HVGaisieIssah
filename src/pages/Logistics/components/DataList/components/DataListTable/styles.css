@@ -76,12 +76,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
-/* .ldataListTable .tableHeader th:last-child {
-  padding-left: 3%;
-} */
-
 .ldataListTableItem td:first-child {
   display: flex;
   position: relative;

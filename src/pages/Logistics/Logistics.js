@@ -1,15 +1,17 @@
 import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 import AddSalesPerson from "./pages/AddSalesPerson/AddSalesPerson";
-import UserProfile from "./pages/VehicleView/VehicleView";
+import VehicleView from "./pages/VehicleView/VehicleView";
 import LogisticsPage from "./pages/LogisticsPage/LogisticsPage";
+import DriverView from "./pages/DriverView/DriverView";
 
 const Logistics= ({ path }) => {
   return (
     <div>
       <Switch>
       <Route exact path={`${path}/add`} component={AddSalesPerson} />
-        <Route exact path={`${path}/:userID`} component={UserProfile} />
+        <Route exact path={`${path}/vehicle/:userID`} component={VehicleView} />
+        <Route exact path={`${path}/driver/:userID`} component={DriverView} />
         <Route path={path} exact component={LogisticsPage} />
       </Switch>
     </div>

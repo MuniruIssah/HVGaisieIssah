@@ -136,7 +136,7 @@ const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
             style={{
               width: "100%",
               height: 0,
-              border: "0.5px solid #e3e7ed",
+              borderBottom: "0.5px solid #e3e7ed",
               margin: "10px 0rem",
             }}
           ></div>

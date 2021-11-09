@@ -43,6 +43,7 @@ const DataListTable = ({
         allowSelection={allowSelect}
         headerList={["NAME", "PHONE NUMBER", "ACCOUNT TYPE", "STATUS"]}
         image={image}
+        actions={actions}
       />
       <FinanceDataListTableMain
         actions={actions}
@@ -57,13 +58,18 @@ const DataListTable = ({
 
 export default DataListTable;
 
-const FinanceDataListTableHeader = ({ headerList, allowSelection, image }) => {
+const FinanceDataListTableHeader = ({
+  headerList,
+  allowSelection,
+  image,
+  actions,
+}) => {
   console.log(headerList);
   const [checked, setChecked] = useState(false);
   return (
     <tr className="tableHeader">
       {allowSelection && (
-         <th style={{width:'5em'}}>
+        <th style={{ width: "5em" }}>
           {!checked ? (
             <div
               className="tableCheck"
@@ -90,7 +96,7 @@ const FinanceDataListTableHeader = ({ headerList, allowSelection, image }) => {
       {headerList.map((item) => (
         <th key={item}>{item}</th>
       ))}
-      <th>Action</th>
+      {actions && <th>Action</th>}
     </tr>
   );
 };
@@ -122,7 +128,7 @@ const FinanceDataListTableItem = ({
   allowSelection,
   showProfileImage,
   actions,
-  image  
+  image,
 }) => {
   const [visible, setVisible] = useState(false);
   const { path } = useRouteMatch();
@@ -156,7 +162,7 @@ const FinanceDataListTableItem = ({
           </td>
         )}
         {image && (
-          <td style={{width:'5em'}}>
+          <td style={{ width: "5em" }}>
             <div
               className="boxAvatar"
               style={{ backgroundImage: `url(${item.IMAGE})` }}
@@ -190,18 +196,21 @@ const FinanceDataListTableItem = ({
             ></div>
           </div>
         </td>
-        <td>
-          {actions.map((item, index) => (
-            <button
-              key={index}
-              className="tableActionButton"
-              style={{
-                backgroundImage: `url(${item.icon})`,
-                backgroundSize: item.size,
-              }}
-            ></button>
-          ))}
-        </td>
+        {actions && (
+          <td>
+            {actions.map((item, index) => (
+              <button
+                key={index}
+                onClick={item.action}
+                className="tableActionButton"
+                style={{
+                  backgroundImage: `url(${item.icon})`,
+                  backgroundSize: item.size,
+                }}
+              ></button>
+            ))}
+          </td>
+        )}
       </tr>
     </>
   );
