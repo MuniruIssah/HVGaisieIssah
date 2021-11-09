@@ -42,6 +42,7 @@ export const labelandValue2 = [
 
 const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
   const [itemsInVehicleView, setItemsInVehicleView] = useState(true);
+  const [salesPerson, setSalesPerson] = useState()
   const [addItemModal, setAddItemModal] = useState(false);
   const [assignSalesPersonModal, setAssignSalesPersonModal] = useState(false);
 
@@ -117,6 +118,8 @@ const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
       <AssignDriverModal
         visible={assignSalesPersonModal}
         setVisible={setAssignSalesPersonModal}
+        salesPerson={salesPerson}
+        changeSalesPerson={setSalesPerson}
       />
       <GoBack label="Logistics" />
       <h1 style={{ marginTop: "2rem" }}>{name}</h1>
@@ -140,7 +143,9 @@ const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
               margin: "10px 0rem",
             }}
           ></div>
-          <SalesPersonSection showModal={setAssignSalesPersonModal} />
+    
+          <SalesPersonSection salesPerson={salesPerson} showModal={setAssignSalesPersonModal} />
+
         </DashBoardCard>
       </LogisticsColumnLayout>
       {display}
@@ -150,7 +155,7 @@ const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
 
 export default VehicleView;
 
-const SalesPersonSection = ({ salesPerson = true, showModal }) => {
+const SalesPersonSection = ({ salesPerson, showModal }) => {
   return (
     <div className="salesPersonSection">
       <span className="spsTitle">Sales Person</span>
