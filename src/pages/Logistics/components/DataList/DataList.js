@@ -13,6 +13,7 @@ const DataList = ({
   allowSelect,
   filters,
   style,
+  image,
   showProfileImage,
   actions,
 }) => {
@@ -20,10 +21,9 @@ const DataList = ({
   return (
     <div style={{ ...style }}>
       <DataListHeader filters={filters} />
-      <DataListExtras>
-        {children}
-      </DataListExtras>
+      <DataListExtras>{children}</DataListExtras>
       <DataListTable
+        image={image}
         showProfileImage={showProfileImage}
         allowSelect={allowSelect}
         actions={actions}

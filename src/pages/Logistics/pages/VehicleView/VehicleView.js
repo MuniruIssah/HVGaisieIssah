@@ -1,12 +1,13 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import DashBoardCard from "../../../DashboardPage/components/DashboardCard/DashboardCard";
 import LabelAndValueStrip from "../../../DashboardPage/components/LabelAndValueStrip/LabelAndValueStrip";
 import GoBack from "../../components/GoBack/GoBack";
 import LogisticsColumnLayout from "../../sectionLayouts/LogisticsColumnLayout/LogisticsColumnLayout";
 import editIcon from "../../assets/edit.svg";
 import deleteIcon from "../../assets/delete.svg";
+import eyeIcon from "../../assets/eye.svg";
 
 import DataList from "../../components/DataList/DataList";
 import "./styles.css";
@@ -40,20 +41,76 @@ export const labelandValue2 = [
 ];
 
 const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
-  const [state, setstate] = useState();
+  const [itemsInVehicleView, setItemsInVehicleView] = useState(true);
   const [addItemModal, setAddItemModal] = useState(false);
   const [assignSalesPersonModal, setAssignSalesPersonModal] = useState(false);
 
   const filters = [
     {
       label: "Items in Vehicle",
-      active: true,
+      active: itemsInVehicleView,
+      onClick: () => setItemsInVehicleView(true),
     },
     {
       label: "Assign History",
-      active: false,
+      active: !itemsInVehicleView,
+      onClick: () => setItemsInVehicleView(false),
     },
   ];
+  const itemsInVehicleActions = [
+    {
+      icon: deleteIcon,
+      action: "",
+      size: 12,
+    },
+    {
+      icon: editIcon,
+      action: "",
+      size: 15,
+    },
+    {
+      icon: eyeIcon,
+      action: "",
+      size: 15,
+    },
+  ];
+  const assignHistoryActions = [
+    {
+      icon: eyeIcon,
+      action: "",
+      size: 15,
+    },
+  ];
+
+  const display = useMemo(() => {
+    if (itemsInVehicleView) {
+      return (
+        <DataList
+          filters={filters}
+          image
+          style={{ margin: "2rem 1rem 0rem" }}
+          actions={itemsInVehicleActions}
+          allowSelect
+        >
+          <button className="addNewUser" onClick={() => setAddItemModal(true)}>
+            <FontAwesomeIcon icon={faPlus} /> <span>Add Items</span>
+          </button>
+        </DataList>
+      );
+    } else {
+      return (
+        <DataList
+          filters={filters}
+          showProfileImage
+          // image
+          style={{ margin: "2rem 1rem 0rem" }}
+          actions={assignHistoryActions}
+        >
+        </DataList>
+      );
+    }
+  }, [itemsInVehicleView]);
+
   return (
     <div className="dashboardPage">
       <AddItemsModal visible={addItemModal} setVisible={setAddItemModal} />
@@ -61,7 +118,7 @@ const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
         visible={assignSalesPersonModal}
         setVisible={setAssignSalesPersonModal}
       />
-      <GoBack />
+      <GoBack label="Logistics" />
       <h1 style={{ marginTop: "2rem" }}>{name}</h1>
       <LogisticsColumnLayout grid="1fr 1fr">
         <DashBoardCard dates dateToday={true} zeeIndex>
@@ -86,18 +143,14 @@ const VehicleView = ({ name = "A2 - (GA-6732-13)" }) => {
           <SalesPersonSection showModal={setAssignSalesPersonModal} />
         </DashBoardCard>
       </LogisticsColumnLayout>
-      <DataList filters={filters} style={{ margin: "2rem 1rem 0rem" }}>
-        <button className="addNewUser" onClick={() => setAddItemModal(true)}>
-          <FontAwesomeIcon icon={faPlus} /> <span>Add Items</span>
-        </button>
-      </DataList>
+      {display}
     </div>
   );
 };
 
 export default VehicleView;
 
-const SalesPersonSection = ({ salesPerson=true, showModal }) => {
+const SalesPersonSection = ({ salesPerson = true, showModal }) => {
   return (
     <div className="salesPersonSection">
       <span className="spsTitle">Sales Person</span>

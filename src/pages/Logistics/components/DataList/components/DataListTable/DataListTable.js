@@ -33,6 +33,7 @@ const dummyList = [
 const DataListTable = ({
   list = dummyList,
   allowSelect,
+  image,
   showProfileImage,
   actions,
 }) => {
@@ -41,12 +42,14 @@ const DataListTable = ({
       <FinanceDataListTableHeader
         allowSelection={allowSelect}
         headerList={["NAME", "PHONE NUMBER", "ACCOUNT TYPE", "STATUS"]}
+        image={image}
       />
       <FinanceDataListTableMain
         actions={actions}
         showProfileImage={showProfileImage}
         list={list}
         allowSelection={allowSelect}
+        image={image}
       />
     </table>
   );
@@ -54,13 +57,13 @@ const DataListTable = ({
 
 export default DataListTable;
 
-const FinanceDataListTableHeader = ({ headerList, allowSelection }) => {
+const FinanceDataListTableHeader = ({ headerList, allowSelection, image }) => {
   console.log(headerList);
   const [checked, setChecked] = useState(false);
   return (
     <tr className="tableHeader">
       {allowSelection && (
-        <th>
+         <th style={{width:'5em'}}>
           {!checked ? (
             <div
               className="tableCheck"
@@ -83,6 +86,7 @@ const FinanceDataListTableHeader = ({ headerList, allowSelection }) => {
           )}
         </th>
       )}
+      {image && <th>IMAGE</th>}
       {headerList.map((item) => (
         <th key={item}>{item}</th>
       ))}
@@ -96,6 +100,7 @@ const FinanceDataListTableMain = ({
   allowSelection,
   actions,
   showProfileImage,
+  image,
 }) => {
   return (
     <tbody className="tableBody">
@@ -103,6 +108,7 @@ const FinanceDataListTableMain = ({
         <FinanceDataListTableItem
           showProfileImage={showProfileImage}
           item={item}
+          image={image}
           actions={actions}
           allowSelection={allowSelection}
         />
@@ -116,6 +122,7 @@ const FinanceDataListTableItem = ({
   allowSelection,
   showProfileImage,
   actions,
+  image  
 }) => {
   const [visible, setVisible] = useState(false);
   const { path } = useRouteMatch();
@@ -125,12 +132,7 @@ const FinanceDataListTableItem = ({
     <>
       <tr className="ldataListTableItem" onClick={() => setChecked(!checked)}>
         {allowSelection && (
-          <td
-          // ref={(element) => {
-          // if (allowSelection){
-          //     element.style.setProperty("display", "block", "important");}
-          // }}
-          >
+          <td>
             {!checked ? (
               <div
                 className="tableCheck"
@@ -151,6 +153,14 @@ const FinanceDataListTableItem = ({
                 />
               </div>
             )}
+          </td>
+        )}
+        {image && (
+          <td style={{width:'5em'}}>
+            <div
+              className="boxAvatar"
+              style={{ backgroundImage: `url(${item.IMAGE})` }}
+            ></div>
           </td>
         )}
         <td>

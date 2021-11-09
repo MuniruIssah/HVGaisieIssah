@@ -20,11 +20,7 @@
   margin-bottom: 0.8rem;
 }
 .ldataListTable .tableHeader th:first-child {
-  display: flex;
-  justify-content: start;
-  margin-top: 0.8rem;
   padding-left: 1rem;
-  align-items: center;
 }
 .ldataListTable .tableHeader th:last-child {
   text-align: right;
@@ -59,6 +55,17 @@
   display: flex;
   align-items: center;
 }
+.boxAvatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: gray;
+  margin-right: 15px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .username .avatar {
   width: 30px;
   height: 30px;
@@ -69,6 +76,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
 /* .ldataListTable .tableHeader th:last-child {
   padding-left: 3%;
 } */
