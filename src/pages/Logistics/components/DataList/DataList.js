@@ -8,19 +8,26 @@ import DataListHeightSelect from "./components/DataListHeightSelect/DataListHeig
 import DataListPagination from "./components/DataListPagination/DataListPagination";
 import DataListTable from "./components/DataListTable/DataListTable";
 import "./styles.css";
-const DataList = ({children,allowSelect,filters,style}) => {
+const DataList = ({
+  children,
+  allowSelect,
+  filters,
+  style,
+  showProfileImage,
+  actions,
+}) => {
   const { path } = useRouteMatch();
-  console.log(path);
   return (
-    <div style={{...style}}>
+    <div style={{ ...style }}>
       <DataListHeader filters={filters} />
       <DataListExtras>
-        {/* <DateToggleButtons white /> */}
-        {/* <AddUserButton path={`${path}/add`} />
-         */}
-         {children}
+        {children}
       </DataListExtras>
-      <DataListTable allowSelect={allowSelect} />
+      <DataListTable
+        showProfileImage={showProfileImage}
+        allowSelect={allowSelect}
+        actions={actions}
+      />
       <DataListFooter>
         <DataListPagination />
         <DataListHeightSelect />

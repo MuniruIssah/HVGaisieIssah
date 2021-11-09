@@ -30,14 +30,24 @@ const dummyList = [
     STATUS: "Active",
   },
 ];
-const DataListTable = ({ list = dummyList, allowSelect }) => {
+const DataListTable = ({
+  list = dummyList,
+  allowSelect,
+  showProfileImage,
+  actions,
+}) => {
   return (
     <table className="ldataListTable">
       <FinanceDataListTableHeader
         allowSelection={allowSelect}
         headerList={["NAME", "PHONE NUMBER", "ACCOUNT TYPE", "STATUS"]}
       />
-      <FinanceDataListTableMain list={list} allowSelection={allowSelect} />
+      <FinanceDataListTableMain
+        actions={actions}
+        showProfileImage={showProfileImage}
+        list={list}
+        allowSelection={allowSelect}
+      />
     </table>
   );
 };
@@ -81,17 +91,32 @@ const FinanceDataListTableHeader = ({ headerList, allowSelection }) => {
   );
 };
 
-const FinanceDataListTableMain = ({ list, allowSelection }) => {
+const FinanceDataListTableMain = ({
+  list,
+  allowSelection,
+  actions,
+  showProfileImage,
+}) => {
   return (
     <tbody className="tableBody">
       {list.map((item) => (
-        <FinanceDataListTableItem item={item} allowSelection={allowSelection} />
+        <FinanceDataListTableItem
+          showProfileImage={showProfileImage}
+          item={item}
+          actions={actions}
+          allowSelection={allowSelection}
+        />
       ))}
     </tbody>
   );
 };
 
-const FinanceDataListTableItem = ({ item, allowSelection }) => {
+const FinanceDataListTableItem = ({
+  item,
+  allowSelection,
+  showProfileImage,
+  actions,
+}) => {
   const [visible, setVisible] = useState(false);
   const { path } = useRouteMatch();
   const history = useHistory();
@@ -101,10 +126,10 @@ const FinanceDataListTableItem = ({ item, allowSelection }) => {
       <tr className="ldataListTableItem" onClick={() => setChecked(!checked)}>
         {allowSelection && (
           <td
-            // ref={(element) => {
-            // if (allowSelection){
-            //     element.style.setProperty("display", "block", "important");}
-            // }}
+          // ref={(element) => {
+          // if (allowSelection){
+          //     element.style.setProperty("display", "block", "important");}
+          // }}
           >
             {!checked ? (
               <div
@@ -130,10 +155,12 @@ const FinanceDataListTableItem = ({ item, allowSelection }) => {
         )}
         <td>
           <div className="username">
-            <div
-              className="avatar"
-              style={{ backgroundImage: `url(${item.IMAGE})` }}
-            ></div>
+            {showProfileImage && (
+              <div
+                className="avatar"
+                style={{ backgroundImage: `url(${item.IMAGE})` }}
+              ></div>
+            )}
             <span>{item.NAME}</span>
           </div>
         </td>
@@ -154,7 +181,7 @@ const FinanceDataListTableItem = ({ item, allowSelection }) => {
           </div>
         </td>
         <td>
-          <button
+          {/* <button
             className="tableActionButton"
             style={{
               backgroundImage: `url(${deleteIcon})`,
@@ -169,7 +196,18 @@ const FinanceDataListTableItem = ({ item, allowSelection }) => {
             style={{ backgroundImage: `url(${eyeIcon})`, backgroundSize: 15 }}
             onClick={() => history.push(`${path}/${item.NAME}`)}
             className="tableActionButton"
-          ></button>
+          ></button> */}
+
+          {actions.map((item, index) => (
+            <button
+              key={index}
+              className="tableActionButton"
+              style={{
+                backgroundImage: `url(${item.icon})`,
+                backgroundSize: item.size,
+              }}
+            ></button>
+          ))}
         </td>
       </tr>
     </>
