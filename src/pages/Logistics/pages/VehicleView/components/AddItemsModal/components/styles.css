@@ -1,0 +1,180 @@
+/* styles for step 1 */
+.out {
+  color: #ff4127 !important;
+}
+/* styles for step 2 */
+.addItemWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.addItemImage {
+  width: 58px;
+  height: 58px;
+  border-radius: 6px;
+  margin-right: 15px;
+  background-position: 0px 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.addItemDetailSection {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e3e7ed;
+}
+.nameAndStock {
+  display: flex;
+  flex-direction: column;
+}
+.nameAndStock span:first-child {
+  font-size: 16px;
+  display: block;
+  width: 80%;
+  color: #040a1d;
+}
+.nameAndStock span:last-child {
+  font-size: 14px;
+  color: #8892a2;
+}
+.qualitySection {
+  display: flex;
+  flex-direction: column;
+}
+.qualitySection span {
+  font-size: 14px;
+  color: #8892a2;
+}
+.inputNumberWrapper {
+  width: 84px;
+  display: flex;
+  /* margin-top: 9px; */
+  height: 35px;
+  border: 1px solid #e3e7ed;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.02),
+    0px 1px 3px rgba(50, 50, 93, 0.15);
+  border-radius: 6px;
+}
+.inputNumberWrapper input {
+  width: 50px;
+  height: 100%;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #040a1d;
+}
+.inputNumberWrapper input:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.inputNumberWrapper input::-webkit-outer-spin-button,
+.inputNumberWrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.inputNumberWrapper input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.uanddWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.upAndDown {
+  width: 28px;
+  height: 14px;
+  border: none;
+  background: #e3e7ed;
+  border-radius: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 6px;
+}
+
+/* styles for step 3 */
+.itemImageOOS {
+  width: 88px;
+  height: 88px;
+  border-radius: 6px;
+  margin-right: 15px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1.5rem 0rem;
+}
+/* styles for step 4 */
+.updateDetailsSection {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.updateDetailsSection span:first-child {
+  font-size: 16px;
+  color: #040a1d;
+}
+.updateDetailsSection span:last-child {
+  font-size: 14px;
+  color: #ff4127;
+}
+
+.customUpdateInventoryInput {
+  /* position: absolute;*/
+  width: 100%;
+  padding: 0rem 10px;
+  height: 55px;
+  border: 1px solid #e3e7ed;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.02),
+    0px 1px 3px rgba(50, 50, 93, 0.15);
+  border-radius: 6px;
+  margin: 2rem 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customUpdateInventoryInput .updateSection {
+  display: flex;
+  align-items: center;
+}
+.customUpdateInventoryInput .updateSection .initialValue {
+  font-weight: 500;
+  font-size: 16px;
+  color: #040a1d;
+  margin-right: 10px;
+}
+.customUpdateInventoryInput .updateSection .added {
+  width: 40px;
+  height: 28px;
+  background: #f4f5f7;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  color: #040a1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.customUpdateInventoryInput .updateSection .result {
+  width: 35px;
+  height: 28px;
+  background: rgb(56, 201, 133, 0.1);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  color: #38c985;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}

@@ -234,3 +234,7 @@
   font-size: 14px;
   border: none;
 }
+
+.addUserButtons .addUserSave:disabled{
+  background: rgb(85, 63, 251,0.1);
+}
