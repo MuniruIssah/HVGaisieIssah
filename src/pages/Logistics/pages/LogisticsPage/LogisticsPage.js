@@ -11,8 +11,10 @@ import {
   SearchLoadingCard,
 } from "../../components/SearchResultCards/SearchResultCards";
 import "./styles.css";
+import { useHistory } from "react-router";
 
 const LogisticsPage = () => {
+  const history = useHistory();
   const [driversView, setDriversView] = useState(false);
   const vehiclesActions = [
     {
@@ -27,14 +29,16 @@ const LogisticsPage = () => {
     },
     {
       icon: eyeIcon,
-      action: "",
+      action: (vehicleId) =>
+        history.push(`/dashboard/logistics/vehicle/${vehicleId}`),
       size: 15,
     },
   ];
   const salesPersonActions = [
     {
       icon: eyeIcon,
-      action: "",
+      action: (driverId) =>
+        history.push(`/dashboard/logistics/driver/${driverId}`),
       size: 15,
     },
   ];
@@ -53,7 +57,11 @@ const LogisticsPage = () => {
   const display = useCallback(() => {
     if (driversView) {
       return (
-        <DataList filters={filters} showProfileImage actions={salesPersonActions}>
+        <DataList
+          filters={filters}
+          showProfileImage
+          actions={salesPersonActions}
+        >
           <AddDriverButton path="/dashboard/logistics/add" />
         </DataList>
       );

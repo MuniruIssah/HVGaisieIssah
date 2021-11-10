@@ -198,14 +198,14 @@ const FinanceDataListTableItem = ({
         </td>
         {actions && (
           <td>
-            {actions.map((item, index) => (
+            {actions.map((action, index) => (
               <button
                 key={index}
-                onClick={item.action}
+                onClick={()=>action.action(item.NAME)}
                 className="tableActionButton"
                 style={{
-                  backgroundImage: `url(${item.icon})`,
-                  backgroundSize: item.size,
+                  backgroundImage: `url(${action.icon})`,
+                  backgroundSize: action.size,
                 }}
               ></button>
             ))}

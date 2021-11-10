@@ -10,8 +10,8 @@ const Logistics= ({ path }) => {
     <div>
       <Switch>
       <Route exact path={`${path}/add`} component={AddSalesPerson} />
-        <Route exact path={`${path}/vehicle/:userID`} component={VehicleView} />
-        <Route exact path={`${path}/driver/:userID`} component={DriverView} />
+        <Route exact path={`${path}/vehicle/:vehicleID`} component={VehicleView} />
+        <Route exact path={`${path}/driver/:driverID`} component={DriverView} />
         <Route path={path} exact component={LogisticsPage} />
       </Switch>
     </div>
