@@ -1,6 +1,8 @@
 import React from "react";
 import DateToggleButtons from "../../../DateToggleButtons/DateToggleButtons";
 import FinanceSelect from "../FinanceSelect/FinanceSelect";
+import { CustomDateRangePicker } from "../../../../../Test";
+
 import "./styles.css";
 
 const DashboardCardHeader = ({ title, dates, large, select }) => {
@@ -15,7 +17,7 @@ const DashboardCardHeader = ({ title, dates, large, select }) => {
       )}
       <div style={{display:'flex'}}>
       {select && <FinanceSelect />}
-      {dates && <DateToggleButtons dateClasses={dates} />}
+      {dates &&  <CustomDateRangePicker />}
       </div>
     </header>
   );

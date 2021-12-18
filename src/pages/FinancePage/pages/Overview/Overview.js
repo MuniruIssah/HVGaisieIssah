@@ -93,7 +93,7 @@ const Overview = () => {
       <h1>
         Finance - <span>Overview</span>
       </h1>
-      <FinanceCard sideGraph={<SideBarChart />} dates dateToday={true}>
+      <FinanceCard zeeIndex sideGraph={<SideBarChart />} dates dateToday={true}>
         <LabelAndValueStrip list={labelandValue} />
       </FinanceCard>
       <FinanceCard select largeHeader title="Revenue Growth" dates>

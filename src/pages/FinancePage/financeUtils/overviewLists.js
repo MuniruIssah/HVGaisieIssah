@@ -7,18 +7,18 @@ export const topFiveCustomers = [
     name: "Lawrence Ati-Zigi",
     cash: "10,311.00",
   },
-  {
-    name: "Razak Abalora",
-    cash: "10,311.00",
-  },
-  {
-    name: "Andy Yiadom",
-    cash: "10,311.00",
-  },
-  {
-    name: "Nicholas Opoku",
-    cash: "10,311.00",
-  },
+  // {
+  //   name: "Razak Abalora",
+  //   cash: "10,311.00",
+  // },
+  // {
+  //   name: "Andy Yiadom",
+  //   cash: "10,311.00",
+  // },
+  // {
+  //   name: "Nicholas Opoku",
+  //   cash: "10,311.00",
+  // },
 ];
 export const vehicleRevenues = [
     {

@@ -6,7 +6,7 @@ import DashboardCardDateToday from "./components/FinanceCardDateToday/FinanceCar
 
 const FinanceCard = (props) => {
   return (
-    <div className="financeCard">
+    <div className="financeCard" style={{...props.style}}>
       {!props.sideGraph ? (
         <FinanceCardBasic {...props}>{props.children}</FinanceCardBasic>
       ) : (
@@ -26,13 +26,14 @@ const FinanceCardWithSideGraph = ({
   select,
   largeHeader,
   dateToday,
+  zeeIndex,
   sideGraph,
   children,
 }) => {
   return (
     <div className="financeCardWithSideGraph">
       <div className="leftColumn">
-        <div className="dashboardCardHeaderSection">
+        <div className="dashboardCardHeaderSection" style={{zIndex:zeeIndex?10:5}}>
           <DashboardCardHeader
             title={title}
             dates={dates}
@@ -53,12 +54,13 @@ const FinanceCardBasic = ({
   title,
   select,
   dates,
+  zeeIndex,
   largeHeader,
   dateToday,
 }) => {
   return (
     <>
-      <div className="dashboardCardHeaderSection">
+      <div className="dashboardCardHeaderSection" style={{zIndex:zeeIndex?10:5}}>
         <DashboardCardHeader
           title={title}
           dates={dates}
