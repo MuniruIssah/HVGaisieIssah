@@ -1,0 +1,46 @@
+.inputBlock {
+    width: 350px;
+    height: 50px;
+    padding: 5px 15px;
+    margin: 15px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e3e7ed;
+    border-radius: 6px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .inputBlock .inputBlockLabel {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #8892a2;
+    opacity: 0;
+    height: 0px;
+    transform: translateY(60%);
+    transition: all 250ms ease-in-out;
+  }
+  .inputBlock .show {
+    height: 15px;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .inputBlock input {
+    height: 60%;
+    width: 100%;
+    font-size: 16px;
+    color: #040a1d;
+    border: none;
+    outline: none;
+  }
+  .inputBlock input::placeholder{
+    transition: all 250ms ease-in-out;
+  }
+  .inputBlock input:focus::placeholder {
+    opacity: 0;
+    font-size: 12px;
+  }
+  

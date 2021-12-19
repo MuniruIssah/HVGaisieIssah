@@ -1,0 +1,46 @@
+.actionsStrip {
+  display: flex;
+  align-items: center;
+}
+.actionStripButton {
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 10px;
+  padding: 0px 14px;
+}
+.delete {
+  background: rgb(136, 146, 162, 0.1);
+  color: #8892a2;
+}
+
+.update {
+  background: rgb(85, 63, 251, 0.1);
+  color: #553ffb;
+}
+
+.iconButton {
+  height: 32px;
+  border: none;
+  background: white;
+  border: 1px solid #e3e7ed;
+  padding: 0px 20px;
+}
+
+.icon {
+  width: 16px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconButton:first-child {
+  border-radius: 6px 0px 0px 6px;
+  border-right: none;
+}
+.iconButton:nth-child(2) {
+  border-radius: 0px 6px 6px 0px;
+}

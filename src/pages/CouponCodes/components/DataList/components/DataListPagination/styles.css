@@ -1,0 +1,30 @@
+.dListPagination {
+  margin-bottom: 0px !important;
+}
+
+.pagination {
+  margin: 0pxx !important;
+}
+ul {
+  margin-bottom: 0px !important;
+}
+
+.page-link {
+  color: #8892a2 !important;
+  background: none !important;
+  border: none !important;
+  padding: 5px 13px !important;
+  font-size: 15px !important;
+  margin: 0px !important;
+}
+.page-link:hover {
+  color: white !important;
+  background: #8892a2 !important;
+  border-radius: 4px !important;
+}
+
+.paginationActive {
+  color: white !important;
+  background: #8892a2 !important;
+  border-radius: 4px !important;
+}

@@ -35,6 +35,7 @@ import DashboardPage from "../pages/DashboardPage/DashboardPage";
 import FinancePage from "../pages/FinancePage/FinancePage";
 import Users from '../pages/Users/Users'
 import Logistics from "../pages/Logistics/Logistics";
+import CouponCodes from "../pages/CouponCodes/CouponCodes";
 export const SideBarContent = [
   {
     label: "Dashboard",
@@ -150,7 +151,7 @@ export const mainContent = [
   },
   {
     path: "/dashboard/couponCodes",
-    component: "This is coupon codes",
+    component: CouponCodes,
   },
   {
     path: "/dashboard/users",
