@@ -28,10 +28,7 @@
 }
 
 .invoiceHeaderButtons {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  margin-right: 3rem;
 }
 .invoiceHeaderButtons button {
   color: #8892a2;
@@ -53,6 +50,7 @@
 .invoiceHeader .eyecons {
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 /* Invoice Issue Strip */

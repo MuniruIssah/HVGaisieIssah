@@ -5,9 +5,9 @@ const DataListInvoiceModal = ({ visible, children, onClose }) => {
   return (
     <>
       {visible && (
-        <div className="dataListModal" onClick={onClose}>
+        <div className="dataListModal">
           <div className="dataListModalContent">
-            <Invoice  />
+            <Invoice onClose={onClose} />
           </div>
         </div>
       )}

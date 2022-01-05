@@ -8,14 +8,12 @@ import close from "../../assets/closeIcon.png";
 import print from "../../assets/print.png";
 import pdf from "../../assets/pdf.png";
 
-
-
 import { faPrint, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
-const Invoice = () => {
+const Invoice = ({onClose}) => {
   return (
     <div>
-      <InvoiceHeader />
+      <InvoiceHeader onClose={onClose} />
       <InvoiceIssueStrip />
       <InvoiceAddressStrip />
       <InvoiceItemList />
@@ -29,29 +27,31 @@ const Invoice = () => {
 
 export default Invoice;
 
-const InvoiceHeader = () => {
+const InvoiceHeader = ({onClose}) => {
   return (
     <header className="invoiceHeader">
       <div className="invoiceIDDiv">
         <span>Invoice ID</span>
         <span>135 546</span>
       </div>
+      
       <div className="invoiceHeaderButtons">
         <button>
-        <div
-        className="eyecons"
-        style={{ backgroundImage: `url(${pdf})`, width: 20, height: 18 }}
-      ></div>
+          <div
+            className="eyecons"
+            style={{ backgroundImage: `url(${pdf})`, width: 20, height: 18 }}
+          ></div>
         </button>
         <button>
-        <div
-        className="eyecons"
-        style={{ backgroundImage: `url(${print})`, width: 18, height: 18 }}
-      ></div>
+          <div
+            className="eyecons"
+            style={{ backgroundImage: `url(${print})`, width: 18, height: 18 }}
+          ></div>
         </button>
       </div>
       <div
         className="eyecons"
+        onClick={onClose}
         style={{ backgroundImage: `url(${close})`, width: 21, height: 21 }}
       ></div>
     </header>
