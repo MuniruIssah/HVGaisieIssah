@@ -21,7 +21,7 @@ const Refund = () => {
   };
 
   const finish = async () => {
-    await toggleRefundModal();
+    toggleRefundModal();
     setLoading(false);
     setSuccess(false);
   };

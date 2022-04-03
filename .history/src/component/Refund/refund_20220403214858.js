@@ -21,9 +21,9 @@ const Refund = () => {
   };
 
   const finish = async () => {
-    await toggleRefundModal();
     setLoading(false);
     setSuccess(false);
+    await toggleRefundModal();
   };
 
   const display = useMemo(() => {

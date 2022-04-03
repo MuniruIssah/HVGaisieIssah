@@ -33,13 +33,4 @@
 .refundSummary {
   background: #ffffff;
   border-radius: 4px;
-  padding: 20px;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.refundSummaryLabelAndValue {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0px;
 }

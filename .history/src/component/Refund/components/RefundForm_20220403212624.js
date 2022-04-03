@@ -1,9 +1,9 @@
 import React from "react";
 import { ModalBody, ModalHeader, ModalFooter, Input } from "reactstrap";
 
-const RefundForm = ({ order, handleSubmit }) => {
+const RefundForm = ({ order }) => {
   return (
-    <form className="refundForm" onSubmit={handleSubmit}>
+    <form className="refundForm">
       <ModalHeader className="text-center" style={{ justifyContent: "center" }}>
         <span> Refund</span>
       </ModalHeader>
@@ -29,28 +29,6 @@ const RefundForm = ({ order, handleSubmit }) => {
         </span>
         <RefundSummary />
         <RefundTextArea />
-        <button
-          className="button"
-          style={{
-            width: "50%",
-            height: 38,
-            alignSelf: "flex-end",
-          }}
-        >
-          Yes Refund ₵823{" "}
-        </button>
-        <span
-          style={{
-            fontSize: 12,
-            color: "#3D4356",
-            display: "block",
-            margin: "1rem 0px",
-            textAlign: "right",
-            width: "100%",
-          }}
-        >
-          This action is not reversible
-        </span>
       </ModalBody>
     </form>
   );
@@ -63,30 +41,18 @@ const RefundSummary = () => {
     <div className="refundSummary">
       <span>Summary</span>
 
-      <RefundSummaryLabelAndValue
-        label={"Items SubTotal"}
-        value={723}
-        info="3 Items"
-      />
+      <RefundSummaryLabelAndValue label={"Items SubTotal"} value={100} />
       <RefundSummaryLabelAndValue label={"Shipping"} value={100} />
-      <RefundSummaryLabelAndValue label={"Tax"} value={0} />
-      <RefundSummaryLabelAndValue
-        label={"Refund Tital"}
-        value={823}
-        valueStyle={{ fontSize: 16, color: "#553FFB", fontWeight: "bold" }}
-      />
+      <RefundSummaryLabelAndValue label={"Tax"} value={100} />
     </div>
   );
 };
 
-const RefundSummaryLabelAndValue = ({ label, value, info, valueStyle }) => {
+const RefundSummaryLabelAndValue = ({ label, value }) => {
   return (
     <div className="refundSummaryLabelAndValue">
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <span style={{ fontSize: 12 }}>{label}</span>
-        {info && <span style={{ fontSize: 12, color: "#8892A2" }}>{info}</span>}
-      </div>
-      <span style={{ fontSize: 14, ...valueStyle }}>₵{value}</span>
+      <span>{label}</span>
+      <span>{value}</span>
     </div>
   );
 };

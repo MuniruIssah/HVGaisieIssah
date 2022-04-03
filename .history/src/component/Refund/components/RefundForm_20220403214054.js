@@ -1,9 +1,9 @@
 import React from "react";
 import { ModalBody, ModalHeader, ModalFooter, Input } from "reactstrap";
 
-const RefundForm = ({ order, handleSubmit }) => {
+const RefundForm = ({ order }) => {
   return (
-    <form className="refundForm" onSubmit={handleSubmit}>
+    <form className="refundForm">
       <ModalHeader className="text-center" style={{ justifyContent: "center" }}>
         <span> Refund</span>
       </ModalHeader>

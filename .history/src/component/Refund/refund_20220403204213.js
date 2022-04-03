@@ -12,38 +12,24 @@ const Refund = () => {
   const [state, setState] = useState({
     reason: "",
   });
-  const handleRefundSubmit = async (e) => {
-    e.preventDefault();
-    await setLoading(true);
-    await setTimeout(() => setLoading(false), 2000);
-
-    setSuccess(true);
-  };
-
-  const finish = async () => {
-    await toggleRefundModal();
-    setLoading(false);
-    setSuccess(false);
-  };
-
   const display = useMemo(() => {
     if (loading) {
       return <Loading />;
     }
     if (success) {
-      return <Success finish={finish} />;
+      return <Success />;
     }
-    return <RefundForm handleSubmit={handleRefundSubmit} />;
+    return <Loading />;
   }, [loading, success]);
 
+  const handleRefundSubmit = () => {};
   return (
     <>
       <button className="refundButton" onClick={toggleRefundModal}>
         Refund
       </button>
       <Modal
-        className="refundModal"
-        style={{ width: loading || success ? 350 : 500 }}
+        style={{ width: 350 }}
         isOpen={showRefundModal}
         centered
         toggle={toggleRefundModal}

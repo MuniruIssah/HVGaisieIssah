@@ -20,10 +20,10 @@ const Refund = () => {
     setSuccess(true);
   };
 
-  const finish = async () => {
-    await toggleRefundModal();
+  const finish = () => {
     setLoading(false);
     setSuccess(false);
+    await toggleRefundModal();
   };
 
   const display = useMemo(() => {

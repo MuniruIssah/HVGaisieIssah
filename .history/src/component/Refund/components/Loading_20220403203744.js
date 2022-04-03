@@ -1,6 +1,6 @@
 import React from "react";
 import { ModalBody, ModalHeader, ModalFooter, Input } from "reactstrap";
-import loading from "../assets/loading.svg";
+import loading from "";
 const Loading = () => {
   return (
     <>
@@ -14,10 +14,6 @@ const Loading = () => {
         }}
       >
         Processing Refund
-        <div
-          className="savingLoader"
-          style={{ backgroundImage: `url(${loading})` }}
-        ></div>
       </ModalBody>
     </>
   );

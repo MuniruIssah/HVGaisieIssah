@@ -20,8 +20,7 @@ const Refund = () => {
     setSuccess(true);
   };
 
-  const finish = async () => {
-    await toggleRefundModal();
+  const finish = () => {
     setLoading(false);
     setSuccess(false);
   };
@@ -31,7 +30,7 @@ const Refund = () => {
       return <Loading />;
     }
     if (success) {
-      return <Success finish={finish} />;
+      return <Success />;
     }
     return <RefundForm handleSubmit={handleRefundSubmit} />;
   }, [loading, success]);

@@ -19,19 +19,12 @@ const Refund = () => {
 
     setSuccess(true);
   };
-
-  const finish = async () => {
-    await toggleRefundModal();
-    setLoading(false);
-    setSuccess(false);
-  };
-
   const display = useMemo(() => {
     if (loading) {
       return <Loading />;
     }
     if (success) {
-      return <Success finish={finish} />;
+      return <Success />;
     }
     return <RefundForm handleSubmit={handleRefundSubmit} />;
   }, [loading, success]);

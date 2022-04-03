@@ -1,9 +1,9 @@
 import React from "react";
 import { ModalBody, ModalHeader, ModalFooter, Input } from "reactstrap";
 
-const RefundForm = ({ order, handleSubmit }) => {
+const RefundForm = ({ order }) => {
   return (
-    <form className="refundForm" onSubmit={handleSubmit}>
+    <form className="refundForm">
       <ModalHeader className="text-center" style={{ justifyContent: "center" }}>
         <span> Refund</span>
       </ModalHeader>
@@ -29,28 +29,6 @@ const RefundForm = ({ order, handleSubmit }) => {
         </span>
         <RefundSummary />
         <RefundTextArea />
-        <button
-          className="button"
-          style={{
-            width: "50%",
-            height: 38,
-            alignSelf: "flex-end",
-          }}
-        >
-          Yes Refund ₵823{" "}
-        </button>
-        <span
-          style={{
-            fontSize: 12,
-            color: "#3D4356",
-            display: "block",
-            margin: "1rem 0px",
-            textAlign: "right",
-            width: "100%",
-          }}
-        >
-          This action is not reversible
-        </span>
       </ModalBody>
     </form>
   );

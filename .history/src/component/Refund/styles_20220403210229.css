@@ -19,27 +19,6 @@
   background: #ffffff;
   border-radius: 6px;
 }
-.refundTextArea textarea {
-  border: none;
-  outline: none;
-}
 .refundTextArea:focus-within {
   outline: 1px solid rgba(71, 125, 251, 0.4);
-}
-.refundModal .modal-content {
-  background-color: #f4f5f7 !important;
-}
-
-.refundSummary {
-  background: #ffffff;
-  border-radius: 4px;
-  padding: 20px;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.refundSummaryLabelAndValue {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0px;
 }

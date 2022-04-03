@@ -14,10 +14,6 @@ const Loading = () => {
         }}
       >
         Processing Refund
-        <div
-          className="savingLoader"
-          style={{ backgroundImage: `url(${loading})` }}
-        ></div>
       </ModalBody>
     </>
   );

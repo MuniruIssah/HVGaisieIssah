@@ -15,23 +15,16 @@ const Refund = () => {
   const handleRefundSubmit = async (e) => {
     e.preventDefault();
     await setLoading(true);
-    await setTimeout(() => setLoading(false), 2000);
-
+    await setTimeout(() => {}, 2000);
+    await setLoading(false);
     setSuccess(true);
   };
-
-  const finish = async () => {
-    await toggleRefundModal();
-    setLoading(false);
-    setSuccess(false);
-  };
-
   const display = useMemo(() => {
     if (loading) {
       return <Loading />;
     }
     if (success) {
-      return <Success finish={finish} />;
+      return <Success />;
     }
     return <RefundForm handleSubmit={handleRefundSubmit} />;
   }, [loading, success]);

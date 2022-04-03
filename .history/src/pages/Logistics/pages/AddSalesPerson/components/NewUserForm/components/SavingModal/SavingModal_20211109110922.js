@@ -12,8 +12,8 @@ const SavingModal = ({ visible, setVisible }) => {
       toggle={() => setVisible(false)}
       style={{ width: 404 }}
     >
-      <SavingLoader />
-      {/* <UnsavedChanges setVisible={setVisible} /> */}
+      {/* <SavingLoader /> */}
+      <UnsavedChanges setVisible={setVisible} />
     </Modal>
   );
 };
