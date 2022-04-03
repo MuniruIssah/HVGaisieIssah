@@ -1,0 +1,11 @@
+.refundButton {
+  color: #3d4356;
+  border: 1px solid black;
+  padding: 2.5px 5px;
+  transition: all 250ms ease-in-out;
+}
+.refundButton:hover {
+  background-color: #3d4356;
+  color: white;
+  border-color: #3d4356;
+}

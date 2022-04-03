@@ -4,22 +4,16 @@ import AddSalesPerson from "./pages/AddSalesPerson/AddSalesPerson";
 import VehicleView from "./pages/VehicleView/VehicleView";
 import LogisticsPage from "./pages/LogisticsPage/LogisticsPage";
 import DriverView from "./pages/DriverView/DriverView";
-import Refund from "../../component/Refund/refund";
 
-const Logistics = ({ path }) => {
+const Logistics= ({ path }) => {
   return (
     <div>
       <Switch>
-        <Route exact path={`${path}/add`} component={AddSalesPerson} />
-        <Route
-          exact
-          path={`${path}/vehicle/:vehicleID`}
-          component={VehicleView}
-        />
+      <Route exact path={`${path}/add`} component={AddSalesPerson} />
+        <Route exact path={`${path}/vehicle/:vehicleID`} component={VehicleView} />
         <Route exact path={`${path}/driver/:driverID`} component={DriverView} />
         <Route path={path} exact component={LogisticsPage} />
       </Switch>
-      <Refund />
     </div>
   );
 };
